@@ -1,77 +1,139 @@
-import Link from "next/link";
+"use client";
 
-import {
-  ArrowRightIcon,
-  GlobeIcon,
-  MapPinIcon,
-  PlayIcon,
-} from "@/components/home/icons";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+import { heroSlides } from "@/components/home/content";
+import { ArrowRightIcon, PlayIcon } from "@/components/home/icons";
 
 export function HeroSection() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % heroSlides.length);
+    }, 5600);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const goToSlide = (index: number) => setActiveSlide(index);
+  const goPrevious = () =>
+    setActiveSlide((current) =>
+      current === 0 ? heroSlides.length - 1 : current - 1,
+    );
+  const goNext = () =>
+    setActiveSlide((current) => (current + 1) % heroSlides.length);
+  const slide = heroSlides[activeSlide];
+
   return (
     <section
       id="inicio"
-      className="relative min-h-[100svh] overflow-hidden px-4 pb-20 pt-30 sm:px-6 sm:pt-36 lg:min-h-[108svh] lg:px-8 lg:pb-24"
+      className="relative isolate min-h-[92svh] overflow-hidden bg-[#030303] px-4 pt-28 text-white sm:px-6 lg:px-8"
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 -z-30 h-full w-full object-cover"
-      >
-        <source src="/herovideo.mov" type="video/quicktime" />
-      </video>
+      {heroSlides.map((slide, index) => (
+        <div
+          key={slide.src}
+          className={`absolute inset-0 z-0 transition-[opacity,transform] duration-[1400ms] ease-out ${
+            index === activeSlide
+              ? "scale-100 opacity-100"
+              : "scale-[1.025] opacity-0"
+          }`}
+        >
+          <Image
+            src={slide.src}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority={index === 0}
+          />
+        </div>
+      ))}
 
-      <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(circle_at_68%_40%,rgba(255,241,214,0.32),rgba(6,6,6,0)_24%),radial-gradient(circle_at_56%_50%,rgba(189,153,83,0.22),rgba(6,6,6,0)_56%),linear-gradient(104deg,rgba(3,3,3,0.88)_0%,rgba(4,4,4,0.62)_48%,rgba(2,2,2,0.9)_100%)]" />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0.35)_26%,rgba(0,0,0,0.56)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.62)_42%,rgba(0,0,0,0.22)_100%),linear-gradient(180deg,rgba(0,0,0,0.48)_0%,rgba(0,0,0,0.3)_54%,#050505_100%)]" />
 
-      <div className="mx-auto grid min-h-[calc(100svh-11rem)] max-w-[1240px] items-center lg:min-h-[calc(108svh-13rem)]">
-        <div className="relative z-10 max-w-[840px]">
-          <p className="hero-reveal text-center text-xs uppercase tracking-[0.2em] text-[#bd9953] sm:text-left">
-            Cine. Emocion. Impacto.
+      <div className="relative z-20 mx-auto grid min-h-[calc(92svh-7rem)] max-w-[1240px] items-center pb-20">
+        <div key={slide.src} className="max-w-[680px]">
+          <p className="hero-reveal text-xs uppercase tracking-[0.28em] text-[#d7bb7b]">
+            {slide.eyebrow}
           </p>
-          <h1 className="hero-reveal hero-reveal-delay-1 mt-6 text-center text-4xl leading-[1.01] tracking-[0.03em] sm:text-left sm:text-6xl lg:text-[88px]">
-            <span className="block">CREAMOS HISTORIAS</span>
-            <span className="block bg-gradient-to-r from-[#bd9953] to-[#68522c] bg-clip-text text-transparent">
-              QUE PERDURAN.
-            </span>
+          <h1 className="hero-reveal hero-reveal-delay-1 mt-5 max-w-[760px] text-4xl leading-[1.04] tracking-normal text-[#f5efe1] sm:text-6xl lg:text-[76px]">
+            {slide.title}
           </h1>
-          <p className="hero-reveal hero-reveal-delay-2 mx-auto mt-7 max-w-[560px] text-center text-sm leading-relaxed text-white/74 sm:mx-0 sm:text-left sm:text-base">
-            Productora audiovisual especializada en cine, eventos y comunicacion
-            de marca. Convertimos ideas en experiencias cinematograficas
-            inolvidables.
+          <p className="hero-reveal hero-reveal-delay-2 mt-6 max-w-[540px] text-sm leading-7 text-[#ded4c2]/82 sm:text-base">
+            {slide.description}
           </p>
 
-          <div className="hero-reveal hero-reveal-delay-3 mt-9 flex flex-wrap  gap-3">
+          <div className="hero-reveal hero-reveal-delay-3 mt-8 flex flex-wrap gap-3">
             <Link
-              href="#filmografia"
-              className="hero-primary-cta inline-flex items-center gap-2 rounded-md border border-[#bd9953]/90 bg-gradient-to-r from-[#bd9953] to-[#68522c] px-5 py-3 text-xs font-medium uppercase tracking-[0.18em] text-black transition-transform duration-300 hover:-translate-y-0.5"
+              href="/portafolio"
+              className="hero-primary-cta inline-flex items-center gap-2 rounded-sm border border-[#d7bb7b]/90 bg-[#d7bb7b] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#090806] transition-transform duration-300 hover:-translate-y-0.5"
             >
               <PlayIcon className="h-3 w-3" />
-              Ver nuestros trabajos
+              Ver portafolio
             </Link>
             <Link
-              href="#nosotros"
-              className="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-3 text-xs font-medium uppercase tracking-[0.18em] text-white/85 transition-colors hover:border-[#bd9953]/60 hover:text-[#bd9953]"
+              href="/filosofia"
+              className="inline-flex items-center gap-2 rounded-sm border border-[#f5efe1]/20 px-5 py-3 text-xs font-medium uppercase tracking-[0.18em] text-[#f5efe1]/86 transition-colors hover:border-[#d7bb7b]/70 hover:text-[#d7bb7b]"
             >
-              Conoce mas
+              Filosofia
               <ArrowRightIcon className="h-3.5 w-3.5" />
             </Link>
           </div>
-
-          <div className="hero-reveal hero-reveal-delay-4 mt-10 flex flex-wrap justify-center gap-6 sm:justify-start">
-            <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-white/72">
-              <MapPinIcon className="h-3.5 w-3.5 text-[#bd9953]" />
-              Madrid - Espana
-            </p>
-            <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-white/72">
-              <GlobeIcon className="h-3.5 w-3.5 text-[#bd9953]" />
-              Disponibles para proyectos globales
-            </p>
-          </div>
         </div>
+      </div>
+
+      <button
+        type="button"
+        aria-label="Slide anterior"
+        onClick={goPrevious}
+        className="absolute left-4 top-1/2 z-30 hidden h-11 w-11 -translate-y-1/2 items-center justify-center border border-[#f5efe1]/16 bg-black/35 text-[#f5efe1] backdrop-blur transition-colors hover:border-[#d7bb7b]/70 hover:text-[#d7bb7b] md:inline-flex"
+      >
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          className="h-5 w-5"
+        >
+          <path d="m12 5-5 5 5 5" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        aria-label="Siguiente slide"
+        onClick={goNext}
+        className="absolute right-4 top-1/2 z-30 hidden h-11 w-11 -translate-y-1/2 items-center justify-center border border-[#f5efe1]/16 bg-black/35 text-[#f5efe1] backdrop-blur transition-colors hover:border-[#d7bb7b]/70 hover:text-[#d7bb7b] md:inline-flex"
+      >
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          className="h-5 w-5"
+        >
+          <path d="m8 5 5 5-5 5" />
+        </svg>
+      </button>
+
+      <div className="absolute bottom-9 left-1/2 z-30 flex -translate-x-1/2 items-center gap-3">
+        {heroSlides.map((slide, index) => (
+          <button
+            key={slide.src}
+            type="button"
+            aria-label={`Ver slide ${index + 1}`}
+            onClick={() => goToSlide(index)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              index === activeSlide
+                ? "w-10 bg-[#d7bb7b]"
+                : "w-1.5 bg-[#f5efe1]/42 hover:bg-[#f5efe1]/70"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );

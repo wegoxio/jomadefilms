@@ -2,11 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { navLinks } from "@/components/home/content";
+import { ArrowRightIcon } from "@/components/home/icons";
 
 export function SiteNavbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -29,19 +32,19 @@ export function SiteNavbar() {
     >
       <div className="mx-auto max-w-[1240px]">
         <nav
-          className={`flex items-center justify-between rounded-2xl px-4 py-2.5 transition-all duration-500 md:px-6 ${
+          className={`flex items-center justify-between rounded-sm px-4 py-2.5 transition-all duration-500 md:px-6 ${
             isScrolled
-              ? "border border-[#bd9953]/45 bg-[#080808]/90 backdrop-blur-xl shadow-[0_12px_36px_rgba(0,0,0,0.55)]"
+              ? "border border-[#d7bb7b]/28 bg-[#11100f]/88 backdrop-blur-xl shadow-[0_12px_36px_rgba(0,0,0,0.42)]"
               : "border-0 bg-transparent shadow-none"
           }`}
         >
-          <Link href="#inicio" className="inline-flex items-center">
-            <div className="relative h-12 w-[152px] overflow-hidden sm:h-14 sm:w-[176px]">
+          <Link href="/" className="inline-flex items-center">
+            <div className="relative h-12 w-[210px] overflow-hidden sm:h-14 sm:w-[248px]">
               <Image
-                src="/logo.png"
+                src="/brand/logo-horizontal.png"
                 alt="Jomade Films"
                 fill
-                sizes="176px"
+                sizes="248px"
                 className="object-contain object-left"
                 priority
               />
@@ -53,14 +56,14 @@ export function SiteNavbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="group inline-flex flex-col items-center text-[11px] uppercase tracking-[0.2em] text-white/72 transition-colors hover:text-[#bd9953]"
+                  className="group inline-flex flex-col items-center text-[11px] uppercase tracking-[0.2em] text-[#f5efe1]/72 transition-colors duration-300 hover:text-[#d7bb7b]"
                 >
                   {item.label}
                   <span
-                    className={`mt-1 h-1 w-1 rounded-full transition-opacity ${
-                      index === 0
-                        ? "bg-[#bd9953] opacity-100"
-                        : "bg-[#bd9953] opacity-0 group-hover:opacity-100"
+                    className={`mt-1.5 h-px transition-all duration-300 ${
+                      pathname === item.href || (index === 0 && pathname === "/")
+                        ? "w-8 bg-[#d7bb7b] opacity-100"
+                        : "w-0 bg-[#d7bb7b] opacity-0 group-hover:w-8 group-hover:opacity-100"
                     }`}
                   />
                 </Link>
@@ -70,17 +73,18 @@ export function SiteNavbar() {
 
           <div className="flex items-center gap-2">
             <Link
-              href="#contacto"
-              className="hidden rounded-md border border-[#bd9953] bg-gradient-to-r from-[#bd9953] to-[#68522c] px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-black transition-transform duration-300 hover:-translate-y-0.5 lg:inline-flex"
+              href="/contacto"
+              className="hidden items-center gap-2 rounded-sm border border-[#d7bb7b] bg-[#d7bb7b] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#090806] transition-transform duration-300 hover:-translate-y-0.5 lg:inline-flex"
             >
               Hablemos
+              <ArrowRightIcon className="h-3 w-3" />
             </Link>
 
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
               aria-label={isMobileMenuOpen ? "Cerrar menu" : "Abrir menu"}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#bd9953]/50 bg-black/70 text-[#bd9953] transition-colors hover:bg-[#bd9953]/12 lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#d7bb7b]/50 bg-black/70 text-[#d7bb7b] transition-colors hover:bg-[#d7bb7b]/12 lg:hidden"
             >
               {isMobileMenuOpen ? (
                 <svg
@@ -120,14 +124,14 @@ export function SiteNavbar() {
               : "mt-0 max-h-0 opacity-0"
           }`}
         >
-          <div className="rounded-2xl border border-[#bd9953]/30 bg-[#090909]/95 p-4 backdrop-blur-xl">
+          <div className="rounded-sm border border-[#d7bb7b]/30 bg-[#090909]/95 p-4 backdrop-blur-xl">
             <ul className="space-y-1">
               {navLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block rounded-lg px-3 py-2 text-xs uppercase tracking-[0.18em] text-white/78 transition-colors hover:bg-[#bd9953]/10 hover:text-[#bd9953]"
+                    className="block rounded-sm px-3 py-2 text-xs uppercase tracking-[0.18em] text-[#f5efe1]/78 transition-colors hover:bg-[#d7bb7b]/10 hover:text-[#d7bb7b]"
                   >
                     {item.label}
                   </Link>
@@ -136,9 +140,9 @@ export function SiteNavbar() {
             </ul>
 
             <Link
-              href="#contacto"
+              href="/contacto"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="mt-4 inline-flex w-full items-center justify-center rounded-md border border-[#bd9953] bg-gradient-to-r from-[#bd9953] to-[#68522c] px-4 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-black"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-sm border border-[#d7bb7b] bg-[#d7bb7b] px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#090806]"
             >
               Hablemos
             </Link>

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --jomade-gold: #bd9953;
-  --jomade-gold-deep: #68522c;
-  --jomade-ink: #060606;
+  --jomade-gold: #d7bb7b;
+  --jomade-ivory: #f5efe1;
+  --jomade-ink: #030303;
 }
 
 html {
@@ -13,17 +13,17 @@ html {
 body {
   background:
     radial-gradient(
-      70% 60% at 14% 6%,
-      rgba(189, 153, 83, 0.16) 0%,
+      58% 46% at 15% 0%,
+      rgba(215, 187, 123, 0.12) 0%,
       rgba(8, 8, 8, 0) 68%
     ),
     radial-gradient(
-      70% 52% at 88% 12%,
-      rgba(104, 82, 44, 0.2) 0%,
+      50% 42% at 86% 12%,
+      rgba(245, 239, 225, 0.07) 0%,
       rgba(8, 8, 8, 0) 56%
     ),
-    linear-gradient(180deg, #050505 0%, #080808 42%, #040404 100%);
-  color: #f6f3ea;
+    linear-gradient(180deg, #030303 0%, #080806 48%, #030303 100%);
+  color: #f5efe1;
   font-family: "All Round Gothic", "Avenir Next", "Century Gothic",
     "Trebuchet MS", sans-serif;
 }
@@ -110,6 +110,27 @@ body {
   }
 }
 
+@keyframes page-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes philosophy-orbit {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(7deg) scale(1.04);
+  }
+}
+
 .hero-reveal {
   opacity: 0;
   animation: hero-reveal-up 0.86s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -179,6 +200,56 @@ body {
   animation: hero-button-sheen 780ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.animate-page-in {
+  opacity: 0;
+  animation: page-in 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-page-in-delay {
+  animation-delay: 0.12s;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 34px, 0) scale(0.985);
+  transition:
+    opacity 820ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 820ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.flip-card {
+  perspective: 1300px;
+}
+
+.flip-card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 780ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.philosophy-orbit {
+  animation: philosophy-orbit 9s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-reveal,
   .hero-reveal-right,
@@ -186,9 +257,14 @@ body {
   .hero-float-slow,
   .hero-beam,
   .hero-grain,
+  .animate-page-in,
+  .scroll-reveal,
+  .flip-card-inner,
+  .philosophy-orbit,
   .hero-primary-cta::after {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
   }
 }

@@ -33,6 +33,6 @@ export type ProcessStep = {
 };
 
 export type SocialLink = {
-  name: "Instagram" | "Vimeo" | "LinkedIn";
+  name: "Instagram" | "Facebook" | "LinkedIn";
   href: string;
 };

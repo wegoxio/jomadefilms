@@ -303,16 +303,14 @@ export function SocialIcon({
     );
   }
 
-  if (name === "Vimeo") {
+  if (name === "Facebook") {
     return (
       <svg
         viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
+        fill="currentColor"
         className={className}
       >
-        <path d="M3.5 10.4c2-1.5 4-2.7 5.3-1.5.8.8 1 2.5 1.2 4.2.2 1.6.3 2.5.9 2.5.8 0 2.8-3.4 2.8-5.1 0-.6-.3-.9-.9-.9-.6 0-1.2.3-1.8.7 1-3.4 3-5 5.6-4.8 1.9.2 2.8 1.4 2.8 3.6 0 3.4-3.6 8.6-7.1 11.5-1.4 1.1-2.7 1.1-4 .1-2.3-1.8-3.1-6.5-4.8-9.5Z" />
+        <path d="M14.1 8.2H16V5h-2.4c-3 0-4.5 1.8-4.5 4.4v2H6.8v3.4h2.3V22h3.7v-7.2h2.8l.5-3.4h-3.3V9.8c0-1 .4-1.6 1.3-1.6Z" />
       </svg>
     );
   }
@@ -325,8 +323,7 @@ export function SocialIcon({
       strokeWidth="1.8"
       className={className}
     >
-      <path d="M7 9.5V17M12 7v10M17 12.5V17" />
-      <path d="M7 7a1 1 0 1 0 0 .01M17 7a1 1 0 1 0 0 .01" />
+      <path d="M7.2 10v7M7.2 7.2v.1M11 17v-7M11 13.1c0-1.9 1.2-3.2 3-3.2 1.9 0 3 1.2 3 3.6V17M14 13.5V17" />
       <rect x="3" y="3" width="18" height="18" rx="3" />
     </svg>
   );

@@ -9,12 +9,12 @@ export function ContactCtaSection() {
         <div className="pointer-events-none absolute -right-6 top-1/2 h-44 w-44 -translate-y-1/2 rounded-full bg-[#bd9953]/18 blur-[48px]" />
         <div className="relative">
           <p className="text-3xl leading-tight tracking-[0.03em] text-white/95 sm:text-5xl">
-            TIENES UNA HISTORIA
+            ¿TIENES UNA HISTORIA
             <br />
             QUE CONTAR?
           </p>
           <p className="mt-4 text-sm text-white/72 sm:text-base">
-            Hablemos y hagamosla inolvidable.
+            Hablemos y hagámosla inolvidable.
           </p>
         </div>
         <Link

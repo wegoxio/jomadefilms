@@ -78,7 +78,7 @@ export function HeroSection() {
               href="/filosofia"
               className="inline-flex items-center gap-2 rounded-sm border border-[#f5efe1]/20 px-5 py-3 text-xs font-medium uppercase tracking-[0.18em] text-[#f5efe1]/86 transition-colors hover:border-[#d7bb7b]/70 hover:text-[#d7bb7b]"
             >
-              Filosofia
+              Filosofía
               <ArrowRightIcon className="h-3.5 w-3.5" />
             </Link>
           </div>

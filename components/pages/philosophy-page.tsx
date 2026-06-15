@@ -17,7 +17,7 @@ const pillarImages = [
 const manifesto = [
   "Desarrollar proyectos con identidad propia.",
   "Convertir sensibilidad narrativa en piezas de alto impacto.",
-  "Unir produccion, direccion, postproduccion y marketing.",
+  "Unir producción, dirección, postproducción y marketing.",
   "Construir recorrido en festivales, mercados y circuitos profesionales.",
 ];
 
@@ -41,15 +41,15 @@ export function PhilosophyPage() {
         <div className="mx-auto grid min-h-[calc(96svh-9rem)] max-w-[1240px] items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="animate-page-in">
             <p className="text-xs uppercase tracking-[0.32em] text-[#d7bb7b]">
-              Filosofia
+              Filosofía
             </p>
             <h1 className="mt-6 max-w-[720px] text-5xl leading-[0.96] text-[#f5efe1] sm:text-7xl lg:text-[92px]">
               Cine como forma de pensar.
             </h1>
             <p className="mt-7 max-w-[560px] text-base leading-8 text-[#ded4c2]/78">
               Jomade Films nace en Madrid para crear piezas audiovisuales con
-              identidad, precision tecnica y una carga emocional que permanezca
-              despues del ultimo corte.
+              identidad, precisión técnica y una carga emocional que permanezca
+              después del último corte.
             </p>
           </div>
 
@@ -66,14 +66,14 @@ export function PhilosophyPage() {
             </div>
             <div className="absolute bottom-0 left-0 w-[62%] border border-[#d7bb7b]/18 bg-[#1d1c1a]/92 p-6 backdrop-blur">
               <p className="text-[10px] uppercase tracking-[0.28em] text-[#d7bb7b]">
-                Fundacion / Madrid / 2025
+                Fundación / Madrid / 2025
               </p>
               <p className="mt-5 text-3xl leading-tight text-[#f5efe1]">
-                Creatividad, innovacion y sensibilidad narrativa.
+                Creatividad, innovación y sensibilidad narrativa.
               </p>
             </div>
             <div className="absolute bottom-18 right-8 hidden w-44 border border-[#d7bb7b]/18 bg-black/36 p-4 text-xs uppercase tracking-[0.18em] text-[#ded4c2]/72 backdrop-blur sm:block">
-              Alto impacto cinematografico
+              Alto impacto cinematográfico
             </div>
           </div>
         </div>
@@ -111,9 +111,9 @@ export function PhilosophyPage() {
                 </h2>
               </div>
               <p className="max-w-[660px] text-base leading-8 text-[#ded4c2]/74">
-                La filosofia de Jomade no es decorativa: define como se decide
-                una idea, como se produce una imagen y como se protege la
-                emocion hasta la entrega final.
+                La filosofía de Jomade no es decorativa: define cómo se decide
+                una idea, cómo se produce una imagen y cómo se protege la
+                emoción hasta la entrega final.
               </p>
             </div>
           </ScrollReveal>
@@ -133,7 +133,7 @@ export function PhilosophyPage() {
                   <div className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-[#d7bb7b] transition-transform duration-700 group-hover:scale-x-100" />
                   <div className="absolute inset-0 flex flex-col justify-between p-5">
                     <p className="flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-[#d7bb7b]">
-                      Filosofia / 0{index + 1}
+                      Filosofía / 0{index + 1}
                       <SparkleIcon className="h-3.5 w-3.5 transition-transform duration-700 group-hover:rotate-45" />
                     </p>
 
@@ -177,10 +177,10 @@ export function PhilosophyPage() {
           <ScrollReveal>
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-[#d7bb7b]">
-                Mision / Vision
+                Misión / Visión
               </p>
               <h2 className="mt-5 text-4xl leading-tight text-[#f5efe1] sm:text-6xl">
-                Una ambicion precisa.
+                Una ambición precisa.
               </h2>
             </div>
           </ScrollReveal>
@@ -189,22 +189,22 @@ export function PhilosophyPage() {
             <ScrollReveal delay={120}>
               <article className="group border border-[#d7bb7b]/14 bg-[#282725]/86 p-7 backdrop-blur transition-all duration-500 hover:-translate-x-2 hover:border-[#d7bb7b]/42">
                 <p className="text-xs uppercase tracking-[0.24em] text-[#d7bb7b]">
-                  Mision
+                  Misión
                 </p>
                 <p className="mt-5 text-2xl leading-10 text-[#f5efe1]">
-                  Liderar la creacion de piezas audiovisuales de alto impacto
-                  cinematografico, con excelencia tecnica y narrativa.
+                  Liderar la creación de piezas audiovisuales de alto impacto
+                  cinematográfico, con excelencia técnica y narrativa.
                 </p>
               </article>
             </ScrollReveal>
             <ScrollReveal delay={240}>
               <article className="group border border-[#d7bb7b]/14 bg-[#282725]/86 p-7 backdrop-blur transition-all duration-500 hover:translate-x-2 hover:border-[#d7bb7b]/42">
                 <p className="text-xs uppercase tracking-[0.24em] text-[#d7bb7b]">
-                  Vision
+                  Visión
                 </p>
                 <p className="mt-5 text-2xl leading-10 text-[#f5efe1]">
                   Consolidarse como productora reconocida por calidad,
-                  innovacion y compromiso creativo en el mercado europeo e
+                  innovación y compromiso creativo en el mercado europeo e
                   internacional.
                 </p>
               </article>
@@ -219,13 +219,13 @@ export function PhilosophyPage() {
             <ScrollReveal className="lg:sticky lg:top-28">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-[#d7bb7b]">
-                  Codigo creativo
+                  Código creativo
                 </p>
                 <h2 className="mt-5 text-4xl leading-tight text-[#f5efe1] sm:text-6xl">
                   La ruta interna de cada proyecto.
                 </h2>
                 <p className="mt-6 text-sm leading-7 text-[#ded4c2]/70">
-                  No es una lista de valores: es la secuencia que guia como
+                  No es una lista de valores: es la secuencia que guía cómo
                   Jomade decide, produce y protege la fuerza de una historia.
                 </p>
               </div>

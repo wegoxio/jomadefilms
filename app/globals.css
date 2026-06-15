@@ -131,6 +131,17 @@ body {
   }
 }
 
+@keyframes gallery-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0) scale(0.992);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
 .hero-reveal {
   opacity: 0;
   animation: hero-reveal-up 0.86s cubic-bezier(0.22, 1, 0.36, 1) forwards;
@@ -250,6 +261,10 @@ body {
   animation: philosophy-orbit 9s ease-in-out infinite;
 }
 
+.animate-gallery-in {
+  animation: gallery-in 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-reveal,
   .hero-reveal-right,
@@ -259,9 +274,10 @@ body {
   .hero-grain,
   .animate-page-in,
   .scroll-reveal,
-  .flip-card-inner,
-  .philosophy-orbit,
-  .hero-primary-cta::after {
+    .flip-card-inner,
+    .philosophy-orbit,
+    .animate-gallery-in,
+    .hero-primary-cta::after {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;

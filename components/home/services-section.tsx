@@ -9,7 +9,7 @@ export function ServicesSection() {
       <div className="mx-auto max-w-[1240px]">
         <p className="inline-flex w-full items-center justify-center gap-2 text-center text-xs uppercase tracking-[0.2em] text-[#bd9953]">
           <SparkleIcon className="h-3.5 w-3.5" />
-          Que hacemos
+          Qué hacemos
         </p>
         <h2 className="mx-auto mt-4 max-w-[760px] text-center text-3xl leading-tight tracking-[0.03em] text-white/95 sm:text-5xl">
           SOLUCIONES AUDIOVISUALES A LA ALTURA DE TU HISTORIA.

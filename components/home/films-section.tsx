@@ -11,17 +11,17 @@ export function FilmsSection() {
           <div>
             <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#bd9953]">
               <SparkleIcon className="h-3.5 w-3.5" />
-              Filmografia destacada
+              Filmografía destacada
             </p>
             <h2 className="mt-3 text-3xl leading-tight tracking-[0.03em] text-white/95 sm:text-4xl">
-              HISTORIAS QUE ESTAN COMENZANDO.
+              HISTORIAS QUE ESTÁN COMENZANDO.
             </h2>
           </div>
           <Link
             href="#contacto"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-[#bd9953]"
           >
-            Ver toda la filmografia
+            Ver toda la filmografía
             <ArrowRightIcon />
           </Link>
         </div>

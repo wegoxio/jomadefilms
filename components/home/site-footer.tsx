@@ -28,7 +28,7 @@ export function SiteFooter() {
             </Link>
             <p className="mt-5 max-w-[340px] text-sm leading-7 text-[#ded4c2]/72">
               Productora audiovisual con sede en Madrid. Cine, eventos y marca
-              con una mirada narrativa y una ejecucion cuidada.
+              con una mirada narrativa y una ejecución cuidada.
             </p>
             <div className="mt-6 flex gap-2 text-[#f5efe1]/68">
               {socialLinks.map((social) => (
@@ -68,7 +68,7 @@ export function SiteFooter() {
             <ul className="mt-5 space-y-3 text-sm text-[#ded4c2]/72">
               <li className="flex items-center gap-2">
                 <MapPinIcon className="h-3.5 w-3.5 text-[#d7bb7b]" />
-                Madrid, Espana
+                Madrid, España
               </li>
               <li className="flex items-center gap-2">
                 <PhoneIcon className="h-3.5 w-3.5 text-[#d7bb7b]" />
@@ -90,7 +90,7 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-3 pt-5 text-xs text-[#ded4c2]/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>(c) 2026 Jomade Films SL. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Jomade Films SL. Todos los derechos reservados.</p>
           <p className="uppercase tracking-[0.18em] text-[#d7bb7b]/66">
             Cine / Eventos / Marca
           </p>

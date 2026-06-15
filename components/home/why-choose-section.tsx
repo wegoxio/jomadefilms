@@ -8,7 +8,7 @@ export function WhyChooseSection() {
         <div>
           <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#bd9953]">
             <SparkleIcon className="h-3.5 w-3.5" />
-            Por que elegirnos
+            Por qué elegirnos
           </p>
           <h2 className="mt-4 text-3xl leading-tight tracking-[0.03em] text-white/95 sm:text-5xl">
             CALIDAD. CREATIVIDAD. COMPROMISO.

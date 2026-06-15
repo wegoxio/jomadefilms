@@ -22,18 +22,18 @@ export function VideoIntroSection() {
 
         <div>
           <p className="text-xs uppercase tracking-[0.28em] text-[#d7bb7b]">
-            Detras de camaras
+            Detrás de cámaras
           </p>
           <h2 className="mt-4 text-3xl leading-tight text-[#f5efe1] sm:text-4xl lg:text-5xl">
             Imagen, sonido y narrativa al servicio de cada historia.
           </h2>
           <p className="mt-5 text-sm leading-7 text-[#ded4c2]/76 sm:text-base">
-            Trabajamos cada proyecto como una pieza cinematografica: concepto,
-            planificacion, rodaje, edicion y entrega. El resultado es contenido
-            con intencion visual, ritmo y una identidad clara.
+            Trabajamos cada proyecto como una pieza cinematográfica: concepto,
+            planificación, rodaje, edición y entrega. El resultado es contenido
+            con intención visual, ritmo y una identidad clara.
           </p>
           <div className="mt-7 grid gap-3 text-sm text-[#f5efe1]/78 sm:grid-cols-2">
-            {["Cine", "Eventos", "Marca", "Postproduccion"].map((item) => (
+            {["Cine", "Eventos", "Marca", "Postproducción"].map((item) => (
               <div
                 key={item}
                 className="border border-[#d7bb7b]/14 bg-[#1f1e1c]/72 px-4 py-3"

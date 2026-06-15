@@ -10,11 +10,11 @@ type ServicesProcessProps = {
 };
 
 const descriptions = [
-  "Ordenamos objetivo, tono, alcance y referencias para que la idea tenga direccion desde el inicio.",
-  "Convertimos la intencion en plan: equipo, tiempos, recursos, narrativa y necesidades tecnicas.",
+  "Ordenamos objetivo, tono, alcance y referencias para que la idea tenga dirección desde el inicio.",
+  "Convertimos la intención en plan: equipo, tiempos, recursos, narrativa y necesidades técnicas.",
   "Ejecutamos rodaje con criterio visual, cuidado del detalle y control de ritmo en set.",
   "Damos forma final con montaje, color, sonido, ritmo y acabado para cada canal.",
-  "Preparamos formatos, piezas finales y materiales listos para difusion o presentacion profesional.",
+  "Preparamos formatos, piezas finales y materiales listos para difusión o presentación profesional.",
 ];
 
 export function ServicesProcess({ steps }: ServicesProcessProps) {

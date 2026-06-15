@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #050505;
+      }
+
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      video {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="video" muted playsinline preload="auto"></video>
+    <canvas id="canvas" width="1280" height="720"></canvas>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const video = document.getElementById("video");
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
+
+      video.src = params.get("src");
+
+      const drawFrame = () => {
+        const width = video.videoWidth || 1280;
+        const height = video.videoHeight || 720;
+
+        canvas.width = width;
+        canvas.height = height;
+        context.drawImage(video, 0, 0, width, height);
+        document.body.dataset.ready = "true";
+      };
+
+      video.addEventListener(
+        "loadedmetadata",
+        () => {
+          const requestedTime = Number(params.get("at") || 1.5);
+          const maxTime = Math.max(0.1, video.duration - 0.5);
+          video.currentTime = Math.min(requestedTime, maxTime);
+        },
+        { once: true },
+      );
+
+      video.addEventListener("seeked", drawFrame, { once: true });
+      video.load();
+    </script>
+  </body>
+</html>

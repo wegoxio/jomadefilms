@@ -10,7 +10,7 @@ export function TestimonialsSection() {
         </p>
         <blockquote className="mt-5 text-2xl leading-snug text-white/92 sm:text-3xl">
           &quot;Trabajar con Jomade Films es trabajar con un equipo que entiende
-          la emocion, el detalle y la excelencia.&quot;
+          la emoción, el detalle y la excelencia.&quot;
         </blockquote>
         <p className="mt-6 text-xs uppercase tracking-[0.16em] text-white/62">
           Marta Cruz - Directora de Marketing

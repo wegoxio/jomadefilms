@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { portfolioProjects } from "@/components/home/content";
-import { ArrowRightIcon, PlayIcon, SparkleIcon } from "@/components/home/icons";
+import { ArrowRightIcon, SparkleIcon } from "@/components/home/icons";
 import { ScrollReveal } from "@/components/home/scroll-reveal";
 import { SiteFooter } from "@/components/home/site-footer";
 import { SiteNavbar } from "@/components/navigation/site-navbar";
+import { PortfolioVideoCard } from "@/components/pages/portfolio-video-card";
 
 export function PortfolioPage() {
   const featured = portfolioProjects[0];
@@ -37,15 +38,15 @@ export function PortfolioPage() {
 
           <div className="animate-page-in animate-page-in-delay border border-[#d7bb7b]/16 bg-[#1d1c1a]/82 p-6 backdrop-blur">
             <p className="text-[10px] uppercase tracking-[0.24em] text-[#d7bb7b]">
-              Seleccion 2022-2026
+              Selección 2022-2026
             </p>
             <p className="mt-5 text-lg leading-8 text-[#ded4c2]/82">
-              Ficcion, contenido comercial y piezas corporativas entre Madrid,
-              Mexico y España. Un portafolio inicial con ambicion de industria.
+              Cine, música, eventos y contenido corporativo con una mirada
+              audiovisual cuidada para piezas con identidad propia.
             </p>
             <div className="mt-7 grid grid-cols-3 border-t border-[#d7bb7b]/12 pt-5 text-center">
-              <PortfolioMetric value="03" label="Proyectos" />
-              <PortfolioMetric value="02" label="Mercados" />
+              <PortfolioMetric value="04" label="Líneas" />
+              <PortfolioMetric value="04" label="Videos" />
               <PortfolioMetric value="2025" label="Inicio" />
             </div>
           </div>
@@ -61,11 +62,11 @@ export function PortfolioPage() {
                   Case studies
                 </p>
                 <h2 className="mt-5 text-4xl leading-tight text-[#f5efe1] sm:text-5xl">
-                  Tres entradas, tres direcciones.
+                  Cuatro formas de contar.
                 </h2>
                 <p className="mt-6 text-sm leading-7 text-[#ded4c2]/70">
-                  La pagina de portafolio funciona como archivo curatorial:
-                  cada proyecto muestra etapa, categoria y proyeccion.
+                  La página de portafolio funciona como archivo curatorial:
+                  cada línea muestra categoría, enfoque y una muestra en video.
                 </p>
               </aside>
 
@@ -73,26 +74,13 @@ export function PortfolioPage() {
                 {portfolioProjects.map((project, index) => (
                   <ScrollReveal key={project.title} delay={index * 120}>
                     <article className="group grid overflow-hidden border border-[#d7bb7b]/12 bg-[#201f1d] transition-all duration-700 hover:border-[#d7bb7b]/42 lg:grid-cols-[0.92fr_1.08fr]">
-                      <div
-                        className={`relative min-h-[360px] overflow-hidden bg-[#171614] ${
-                          index % 2 === 1 ? "lg:order-2" : ""
-                        }`}
-                      >
-                        <Image
-                          src={project.image}
-                          alt=""
-                          fill
-                          sizes="(min-width: 1024px) 45vw, 100vw"
-                          className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,0,0,0.72)_100%)]" />
-                        <div className="absolute left-5 top-5 inline-flex h-11 w-11 items-center justify-center border border-[#d7bb7b]/30 bg-black/42 text-[#d7bb7b] backdrop-blur">
-                          <PlayIcon className="h-4 w-4" />
-                        </div>
-                        <p className="absolute bottom-5 left-5 text-7xl leading-none text-[#d7bb7b]/24">
-                          0{index + 1}
-                        </p>
-                      </div>
+                      <PortfolioVideoCard
+                        index={index}
+                        poster={project.image}
+                        title={project.title}
+                        videoSrc={project.videoSrc}
+                        reverse={index % 2 === 1}
+                      />
 
                       <div className="flex flex-col justify-between p-6 sm:p-8">
                         <div>
@@ -124,10 +112,10 @@ export function PortfolioPage() {
                             ))}
                           </div>
                           <Link
-                            href="/contacto"
+                            href={`/portafolio/${project.slug}`}
                             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-[#d7bb7b]"
                           >
-                            Consultar
+                            Ver proyecto
                             <ArrowRightIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                           </Link>
                         </div>
@@ -152,7 +140,7 @@ export function PortfolioPage() {
                 Siguiente obra
               </p>
               <h2 className="mx-auto mt-5 max-w-[760px] text-4xl leading-tight text-[#f5efe1] sm:text-6xl">
-                El portafolio sigue creciendo proyecto a proyecto.
+                El portafolio puede crecer con nuevas piezas por categoría.
               </h2>
               <Link
                 href="/contacto"

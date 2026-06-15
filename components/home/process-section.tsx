@@ -10,7 +10,7 @@ export function ProcessSection() {
           Nuestro proceso
         </p>
         <h2 className="mt-3 max-w-[600px] text-3xl leading-tight tracking-[0.03em] text-white/95 sm:text-4xl">
-          ASI CONVERTIMOS TU IDEA EN UNA GRAN HISTORIA.
+          ASÍ CONVERTIMOS TU IDEA EN UNA GRAN HISTORIA.
         </h2>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">

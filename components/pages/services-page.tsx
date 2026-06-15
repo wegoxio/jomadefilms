@@ -16,10 +16,10 @@ const serviceImages = [
 ];
 
 const serviceMeta = [
-  "Ficcion / Desarrollo / Rodaje",
+  "Ficción / Desarrollo / Rodaje",
   "Eventos / Cobertura / Highlights",
-  "Marca / Publicidad / Campana",
-  "Edicion / Color / Entrega",
+  "Marca / Publicidad / Campaña",
+  "Edición / Color / Entrega",
 ];
 
 export function ServicesPage() {
@@ -44,12 +44,12 @@ export function ServicesPage() {
               Servicios
             </p>
             <h1 className="mt-6 max-w-[820px] text-5xl leading-[0.98] text-[#f5efe1] sm:text-7xl lg:text-[88px]">
-              Produccion audiovisual con lenguaje de cine.
+              Producción audiovisual con lenguaje de cine.
             </h1>
             <p className="mt-7 max-w-[600px] text-base leading-8 text-[#ded4c2]/78">
-              Desde una pieza de ficcion hasta contenido para eventos o marca,
-              Jomade trabaja cada proyecto con direccion creativa, precision
-              tecnica y una estetica cinematografica.
+              Desde una pieza de ficción hasta contenido para eventos o marca,
+              Jomade trabaja cada proyecto con dirección creativa, precisión
+              técnica y una estética cinematográfica.
             </p>
             <Link
               href="/contacto"
@@ -86,7 +86,7 @@ export function ServicesPage() {
                 Integral
               </p>
               <p className="mt-3 max-w-[240px] text-2xl leading-tight text-[#f5efe1]">
-                Idea, rodaje, postproduccion y entrega.
+                Idea, rodaje, postproducción y entrega.
               </p>
             </div>
           </div>
@@ -99,15 +99,15 @@ export function ServicesPage() {
             <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-[#d7bb7b]">
-                  Que hacemos
+                  Qué hacemos
                 </p>
                 <h2 className="mt-5 text-4xl leading-tight text-[#f5efe1] sm:text-6xl">
-                  Cuatro lineas, una misma mirada.
+                  Cuatro líneas, una misma mirada.
                 </h2>
               </div>
               <p className="max-w-[640px] text-base leading-8 text-[#ded4c2]/74">
                 Cada servicio se adapta al proyecto, pero todos comparten el
-                mismo criterio: narrativa clara, imagen cuidada y ejecucion
+                mismo criterio: narrativa clara, imagen cuidada y ejecución
                 profesional.
               </p>
             </div>
@@ -181,10 +181,10 @@ export function ServicesPage() {
             <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-[#d7bb7b]">
-                  Metodo
+                  Método
                 </p>
                 <h2 className="mt-5 max-w-[640px] text-4xl leading-tight text-[#f5efe1] sm:text-6xl">
-                  Una produccion que avanza con ritmo.
+                  Una producción que avanza con ritmo.
                 </h2>
               </div>
               <p className="max-w-[440px] text-sm leading-7 text-[#ded4c2]/70">
@@ -213,7 +213,7 @@ export function ServicesPage() {
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08)_0%,rgba(0,0,0,0.74)_100%)]" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-[10px] uppercase tracking-[0.26em] text-[#d7bb7b]">
-                    Brief de produccion
+                    Brief de producción
                   </p>
                   <p className="mt-4 max-w-[420px] text-3xl leading-tight text-[#f5efe1]">
                     Cuatro datos convierten una idea en una propuesta viable.
@@ -233,7 +233,7 @@ export function ServicesPage() {
                   {[
                     "Objetivo de la pieza",
                     "Fecha o ventana de rodaje",
-                    "Ubicacion y alcance",
+                    "Ubicación y alcance",
                     "Referencias visuales",
                   ].map((item, index) => (
                     <div

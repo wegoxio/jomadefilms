@@ -12,17 +12,17 @@ export function AboutSection() {
             Nuestra historia
           </p>
           <h2 className="mt-4 max-w-[500px] text-3xl leading-tight tracking-[0.03em] text-white/95 sm:text-5xl">
-            CINE CON IDENTIDAD. PROPOSITO Y VISION.
+            CINE CON IDENTIDAD. PROPÓSITO Y VISIÓN.
           </h2>
           <p className="mt-6 max-w-[560px] text-sm leading-relaxed text-white/72 sm:text-base">
             Jomade Films SL es una productora audiovisual fundada en Madrid en
             2025 por un equipo de profesionales apasionados por contar historias
-            con sensibilidad, innovacion y excelencia tecnica.
+            con sensibilidad, innovación y excelencia técnica.
           </p>
           <p className="mt-5 max-w-[560px] text-sm leading-relaxed text-white/65">
-            Nacemos con la intencion de desarrollar proyectos cinematograficos
-            con identidad propia y proyeccion internacional, con una mirada
-            estrategica para eventos, publicidad y marcas.
+            Nacemos con la intención de desarrollar proyectos cinematográficos
+            con identidad propia y proyección internacional, con una mirada
+            estratégica para eventos, publicidad y marcas.
           </p>
           <Link
             href="#contacto"

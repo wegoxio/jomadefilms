@@ -9,10 +9,10 @@ type PhilosophyTimelineProps = {
 };
 
 const descriptions = [
-  "La identidad se define antes de encender la camara: tono, intencion y mirada.",
-  "La sensibilidad narrativa se traduce en ritmo, atmosfera y decisiones visuales precisas.",
-  "El equipo trabaja de forma integral para que direccion, produccion y postproduccion avancen juntas.",
-  "Cada pieza se piensa con ambicion profesional y potencial de recorrido real.",
+  "La identidad se define antes de encender la cámara: tono, intención y mirada.",
+  "La sensibilidad narrativa se traduce en ritmo, atmósfera y decisiones visuales precisas.",
+  "El equipo trabaja de forma integral para que dirección, producción y postproducción avancen juntas.",
+  "Cada pieza se piensa con ambición profesional y potencial de recorrido real.",
 ];
 
 export function PhilosophyTimeline({ items, images }: PhilosophyTimelineProps) {

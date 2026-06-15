@@ -12,8 +12,8 @@ import { ScrollReveal } from "@/components/home/scroll-reveal";
 import { SiteFooter } from "@/components/home/site-footer";
 import { SiteNavbar } from "@/components/navigation/site-navbar";
 
-const projectTypes = ["Cine", "Evento", "Marca", "Postproduccion"];
-const briefItems = ["Objetivo", "Fecha", "Ubicacion", "Referencias"];
+const projectTypes = ["Cine", "Evento", "Marca", "Postproducción"];
+const briefItems = ["Objetivo", "Fecha", "Ubicación", "Referencias"];
 
 export function ContactPage() {
   return (
@@ -40,9 +40,9 @@ export function ContactPage() {
               Convierte una idea en plan de rodaje.
             </h1>
             <p className="mt-7 max-w-[560px] text-base leading-8 text-[#ded4c2]/78">
-              Comparte el objetivo, fechas, ubicacion y referencias. Te
+              Comparte el objetivo, fechas, ubicación y referencias. Te
               devolvemos una ruta clara para producir una pieza con criterio
-              cinematografico.
+              cinematográfico.
             </p>
           </div>
 
@@ -73,12 +73,21 @@ export function ContactPage() {
                 Canal directo
               </p>
               <h2 className="mt-5 text-4xl leading-tight text-[#f5efe1] sm:text-5xl">
-                Hablemos con informacion suficiente para avanzar.
+                Hablemos con información suficiente para avanzar.
               </h2>
               <div className="mt-8 space-y-3">
-                <ContactLine icon={<MapPinIcon className="h-4 w-4" />} text="Madrid, España" />
-                <ContactLine icon={<PhoneIcon className="h-4 w-4" />} text="+34 600 000 000" />
-                <ContactLine icon={<MailIcon className="h-4 w-4" />} text="hola@jomadefilms.com" />
+                <ContactLine
+                  icon={<MapPinIcon className="h-4 w-4" />}
+                  text="Madrid, España"
+                />
+                <ContactLine
+                  icon={<PhoneIcon className="h-4 w-4" />}
+                  text="+34 600 000 000"
+                />
+                <ContactLine
+                  icon={<MailIcon className="h-4 w-4" />}
+                  text="hola@jomadefilms.com"
+                />
               </div>
             </aside>
           </ScrollReveal>
@@ -108,8 +117,8 @@ export function ContactPage() {
               </div>
 
               <div className="mt-7 grid gap-4 md:grid-cols-2">
-                <Input label="Fecha estimada" placeholder="Mes / ano" />
-                <Input label="Ubicacion" placeholder="Madrid, Mexico..." />
+                <Input label="Fecha estimada" placeholder="Mes / año" />
+                <Input label="Ubicación" placeholder="Madrid, México..." />
               </div>
 
               <label className="mt-7 block">
@@ -118,14 +127,14 @@ export function ContactPage() {
                 </span>
                 <textarea
                   className="mt-2 min-h-44 w-full border border-[#d7bb7b]/16 bg-[#282725] px-4 py-3 text-sm text-[#f5efe1] outline-none transition-colors placeholder:text-[#ded4c2]/40 focus:border-[#d7bb7b]/70"
-                  placeholder="Cuentanos que quieres producir, para quien, donde se vera y que resultado esperas."
+                  placeholder="Cuéntanos qué quieres producir, para quién, dónde se verá y qué resultado esperas."
                 />
               </label>
 
               <div className="mt-7 flex flex-col gap-4 border-t border-[#d7bb7b]/12 pt-6 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-[420px] text-xs leading-6 text-[#ded4c2]/58">
                   Este formulario es visual por ahora. Cuando definan proveedor
-                  de email o backend, lo conectamos a envio real.
+                  de email o backend, lo conectamos a envío real.
                 </p>
                 <button
                   type="button"
@@ -142,7 +151,7 @@ export function ContactPage() {
 
       <section className="border-y border-[#d7bb7b]/12 bg-[#1f1e1c] px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-[1180px] gap-4 md:grid-cols-3">
-          {["Respuesta clara", "Alcance definido", "Ruta de produccion"].map(
+          {["Respuesta clara", "Alcance definido", "Ruta de producción"].map(
             (item, index) => (
               <ScrollReveal key={item} delay={index * 100}>
                 <div className="group border border-[#d7bb7b]/12 bg-[#201f1d] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#d7bb7b]/40">
@@ -150,10 +159,10 @@ export function ContactPage() {
                   <h3 className="mt-8 text-2xl text-[#f5efe1]">{item}</h3>
                   <p className="mt-4 text-sm leading-7 text-[#ded4c2]/70">
                     {index === 0
-                      ? "Revisamos el contexto y respondemos con los proximos pasos."
+                      ? "Revisamos el contexto y respondemos con los próximos pasos."
                       : index === 1
                         ? "Aterrizamos necesidades, formatos, recursos y tiempos."
-                        : "Convertimos la conversacion en un camino viable de produccion."}
+                        : "Convertimos la conversación en un camino viable de producción."}
                   </p>
                 </div>
               </ScrollReveal>

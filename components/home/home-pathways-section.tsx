@@ -4,18 +4,18 @@ import { ArrowRightIcon } from "@/components/home/icons";
 
 const pathways = [
   {
-    label: "Filosofia",
-    title: "Una productora nacida desde la mirada cinematografica.",
+    label: "Filosofía",
+    title: "Una productora nacida desde la mirada cinematográfica.",
     href: "/filosofia",
   },
   {
     label: "Servicios",
-    title: "Produccion, eventos, publicidad y postproduccion.",
+    title: "Producción, eventos, publicidad y postproducción.",
     href: "/servicios",
   },
   {
     label: "Portafolio",
-    title: "Ficcion y proyectos comerciales entre Mexico y España.",
+    title: "Ficción y proyectos comerciales entre México y España.",
     href: "/portafolio",
   },
 ];

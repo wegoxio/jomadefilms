@@ -9,7 +9,7 @@ type PortfolioVideoCardProps = {
   index: number;
   poster: string;
   title: string;
-  videoSrc: string;
+  videoSrc?: string;
   reverse?: boolean;
 };
 
@@ -22,6 +22,7 @@ export function PortfolioVideoCard({
 }: PortfolioVideoCardProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const canPlayVideo = Boolean(videoSrc);
 
   const handleVideoReady = () => {
     const video = videoRef.current;
@@ -42,7 +43,7 @@ export function PortfolioVideoCard({
         reverse ? "lg:order-2" : ""
       }`}
     >
-      {isPlaying ? (
+      {isPlaying && canPlayVideo ? (
         <video
           ref={videoRef}
           src={videoSrc}
@@ -60,7 +61,11 @@ export function PortfolioVideoCard({
           type="button"
           aria-label={`Reproducir ${title}`}
           className="group/video relative block h-full min-h-[320px] w-full overflow-hidden text-left sm:min-h-[360px]"
-          onClick={() => setIsPlaying(true)}
+          onClick={() => {
+            if (canPlayVideo) {
+              setIsPlaying(true);
+            }
+          }}
         >
           <Image
             src={poster}

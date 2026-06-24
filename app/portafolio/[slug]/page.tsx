@@ -106,6 +106,47 @@ export default async function PortfolioDetailRoute({
               <ProjectFact label="Ubicación" value={project.location} />
             </div>
 
+            {project.festivalHighlights?.length ? (
+              <div className="mt-8 rounded-[1.1rem] border border-[#d7bb7b]/14 bg-[#171614] p-5">
+                {project.festivalHighlights.map((section) => (
+                  <div key={section.title} className="space-y-3">
+                    <p className="text-[10px] uppercase tracking-[0.24em] text-[#d7bb7b]">
+                      {section.title}
+                    </p>
+                    <ul className="space-y-2">
+                      {section.items.map((item) => (
+                        <li
+                          key={item}
+                          className="text-sm leading-7 text-[#ded4c2]/78"
+                        >
+                          <span className="mr-2 text-[#d7bb7b]">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ) : null}
+
+            {project.cast?.length ? (
+              <div className="mt-8">
+                <p className="text-xs uppercase tracking-[0.24em] text-[#d7bb7b]">
+                  Reparto
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.cast.map((person) => (
+                    <span
+                      key={person}
+                      className="border border-[#d7bb7b]/16 bg-[#d7bb7b]/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-[#f5efe1]"
+                    >
+                      {person}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
             <div className="mt-8">
               <p className="text-xs uppercase tracking-[0.24em] text-[#d7bb7b]">
                 Entregables

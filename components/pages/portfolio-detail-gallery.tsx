@@ -105,18 +105,6 @@ export function PortfolioDetailGallery({
     });
   };
 
-  const goToPrevious = () => {
-    if (activeIndex > 0) {
-      scrollToIndex(activeIndex - 1);
-    }
-  };
-
-  const goToNext = () => {
-    if (activeIndex < assets.length - 1) {
-      scrollToIndex(activeIndex + 1);
-    }
-  };
-
   return (
     <div className="space-y-4">
       <div className="relative h-[min(72vh,460px)] overflow-hidden border border-[#d7bb7b]/16 bg-[#12110f] sm:h-[500px] lg:h-[560px]">
@@ -175,7 +163,7 @@ export function PortfolioDetailGallery({
                 }}
                 type="button"
                 onClick={() => scrollToIndex(index)}
-                className={`group relative h-24 shrink-0 snap-start overflow-hidden border bg-[#171614] transition-all duration-300 basis-[calc((100%-12px)/2)] sm:basis-[calc((100%-24px)/3)] lg:basis-[calc((100%-48px)/5)] ${
+                className={`group relative h-24 shrink-0 snap-start overflow-hidden border bg-[#171614] transition-all duration-300 basis-[calc((100%_-_12px)/2)] sm:basis-[calc((100%_-_24px)/3)] lg:basis-[calc((100%_-_48px)/5)] ${
                   isActive
                     ? "border-[#d7bb7b] shadow-[0_0_0_1px_rgba(215,187,123,0.2)]"
                     : "border-[#d7bb7b]/14 hover:border-[#d7bb7b]/50"

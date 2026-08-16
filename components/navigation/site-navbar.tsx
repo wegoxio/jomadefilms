@@ -83,7 +83,7 @@ export function SiteNavbar() {
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-              aria-label={isMobileMenuOpen ? "Cerrar menu" : "Abrir menu"}
+              aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#d7bb7b]/50 bg-black/70 text-[#d7bb7b] transition-colors hover:bg-[#d7bb7b]/12 lg:hidden"
             >
               {isMobileMenuOpen ? (

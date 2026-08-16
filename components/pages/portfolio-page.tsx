@@ -9,29 +9,27 @@ import { SiteNavbar } from "@/components/navigation/site-navbar";
 import { PortfolioVideoCard } from "@/components/pages/portfolio-video-card";
 
 export function PortfolioPage() {
-  const featured = portfolioProjects[0];
-
   return (
     <main className="relative flex-1 overflow-x-clip bg-[#282725] text-white">
       <SiteNavbar />
 
-      <section className="relative isolate min-h-[100svh] overflow-hidden px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pt-34">
+      <section className="relative isolate min-h-svh overflow-hidden px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pt-34">
         <Image
-          src={featured.image}
+          src="/images/CLAQUETA 1.png"
           alt=""
           fill
           sizes="100vw"
-          className="absolute inset-0 -z-20 object-cover opacity-[0.44]"
+          className="absolute inset-0 -z-20 object-cover object-center opacity-75"
           priority
         />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.58)_0%,rgba(0,0,0,0.36)_45%,#282725_100%),linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.5)_55%,rgba(0,0,0,0.14)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.52)_0%,rgba(0,0,0,0.3)_48%,#282725_100%),linear-gradient(90deg,rgba(0,0,0,0.94)_0%,rgba(0,0,0,0.62)_50%,rgba(0,0,0,0.2)_100%)]" />
 
-        <div className="mx-auto grid min-h-[calc(100svh-8rem)] max-w-[1240px] items-end gap-10 pb-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mx-auto grid min-h-[calc(100svh-8rem)] max-w-[1240px] items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="animate-page-in">
             <p className="text-xs uppercase tracking-[0.34em] text-[#d7bb7b]">
               Portafolio
             </p>
-            <h1 className="mt-6 max-w-[900px] text-6xl leading-[0.9] text-[#f5efe1] sm:text-8xl lg:text-[118px]">
+            <h1 className="mt-6 max-w-[900px] text-5xl leading-[0.9] text-[#f5efe1] sm:text-8xl lg:text-[118px]">
               Archivo de historias en movimiento.
             </h1>
           </div>
@@ -46,7 +44,7 @@ export function PortfolioPage() {
             </p>
             <div className="mt-7 grid grid-cols-3 border-t border-[#d7bb7b]/12 pt-5 text-center">
               <PortfolioMetric value="04" label="Líneas" />
-              <PortfolioMetric value="04" label="Videos" />
+              <PortfolioMetric value="04" label="Vídeos" />
               <PortfolioMetric value="2025" label="Inicio" />
             </div>
           </div>
@@ -59,14 +57,14 @@ export function PortfolioPage() {
             <div className="grid gap-8 lg:grid-cols-[0.42fr_1fr]">
               <aside className="lg:sticky lg:top-28 lg:h-fit">
                 <p className="text-xs uppercase tracking-[0.3em] text-[#d7bb7b]">
-                  Case studies
+                  Casos de estudio
                 </p>
                 <h2 className="mt-5 text-4xl leading-tight text-[#f5efe1] sm:text-5xl">
                   Cuatro formas de contar.
                 </h2>
                 <p className="mt-6 text-sm leading-7 text-[#ded4c2]/70">
                   La página de portafolio funciona como archivo curatorial:
-                  cada línea muestra categoría, enfoque y una muestra en video.
+                  cada línea muestra categoría, enfoque y una muestra en vídeo.
                 </p>
               </aside>
 

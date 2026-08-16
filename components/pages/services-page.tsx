@@ -9,10 +9,10 @@ import { SiteNavbar } from "@/components/navigation/site-navbar";
 import { ServicesProcess } from "@/components/pages/services-process";
 
 const serviceImages = [
-  "/images/hero-production.png",
-  "/images/hero-location.png",
-  "/images/hero-postproduction.png",
-  "/images/hero-production.png",
+  "/images/CLAQUETA 1.png",
+  "/images/pexels-luisbecerrafotografo-6918174.jpg",
+  "/images/pexels-thisispav-30622038.jpg",
+  "/images/pexels-fukajaz-31718971.jpg",
 ];
 
 const serviceMeta = [
@@ -27,9 +27,9 @@ export function ServicesPage() {
     <main className="relative flex-1 overflow-x-clip bg-[#282725] text-white">
       <SiteNavbar />
 
-      <section className="relative isolate min-h-[94svh] overflow-hidden px-4 pb-20 pt-30 sm:px-6 lg:px-8 lg:pt-36">
+      <section className="relative isolate min-h-svh overflow-hidden px-4 pb-20 pt-30 sm:px-6 lg:px-8 lg:pt-36">
         <Image
-          src="/images/hero-postproduction.png"
+          src="/images/IMG_7484.webp"
           alt=""
           fill
           sizes="100vw"
@@ -38,7 +38,7 @@ export function ServicesPage() {
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.68)_48%,rgba(0,0,0,0.24)_100%),linear-gradient(180deg,rgba(40,39,37,0.12)_0%,#282725_96%)]" />
 
-        <div className="mx-auto grid min-h-[calc(94svh-9rem)] max-w-[1240px] items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
+        <div className="mx-auto grid min-h-[calc(100svh-9rem)] max-w-[1240px] items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="animate-page-in">
             <p className="text-xs uppercase tracking-[0.32em] text-[#d7bb7b]">
               Servicios
@@ -63,7 +63,7 @@ export function ServicesPage() {
           <div className="relative hidden min-h-[540px] animate-page-in animate-page-in-delay lg:block">
             <div className="absolute right-0 top-0 h-[54%] w-[72%] overflow-hidden border border-[#d7bb7b]/18">
               <Image
-                src="/images/hero-production.png"
+                src="/images/CLAQUETA 1.png"
                 alt=""
                 fill
                 sizes="42vw"
@@ -73,7 +73,7 @@ export function ServicesPage() {
             </div>
             <div className="absolute bottom-10 left-0 h-[52%] w-[66%] overflow-hidden border border-[#d7bb7b]/18">
               <Image
-                src="/images/hero-location.png"
+                src="/images/pexels-thisispav-30622038.jpg"
                 alt=""
                 fill
                 sizes="38vw"
@@ -144,7 +144,7 @@ export function ServicesPage() {
                       <h3 className="mt-4 max-w-[520px] text-4xl leading-tight text-[#f5efe1]">
                         {service.title}
                       </h3>
-                      <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-700 ease-out group-hover:grid-rows-[1fr]">
+                      <div className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-700 ease-out lg:grid-rows-[0fr] lg:group-hover:grid-rows-[1fr]">
                         <div className="overflow-hidden">
                           <p className="mt-5 max-w-[560px] text-sm leading-7 text-[#ded4c2]/82">
                             {service.description}
@@ -167,7 +167,7 @@ export function ServicesPage() {
       <section className="relative overflow-hidden border-y border-[#d7bb7b]/12 bg-[#1f1e1c] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="absolute inset-y-0 left-0 w-1/2 opacity-20">
           <Image
-            src="/images/hero-production.png"
+            src="/images/IMG_7486.webp"
             alt=""
             fill
             sizes="50vw"
@@ -204,7 +204,7 @@ export function ServicesPage() {
             <div className="grid overflow-hidden border border-[#d7bb7b]/14 bg-[#201f1d] lg:grid-cols-[0.9fr_1.1fr]">
               <div className="relative min-h-[360px] overflow-hidden">
                 <Image
-                  src="/images/hero-location.png"
+                  src="/images/madrid 1.png"
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 45vw, 100vw"

@@ -16,21 +16,21 @@ export const navLinks = [
 
 export const heroSlides = [
   {
-    src: "/images/hero-production.png",
+    src: "/images/CLAQUETA 1.png",
     eyebrow: "Cine. Emoción. Impacto.",
     title: "Creamos historias que perduran.",
     description:
-      "Productora audiovisual y cinematográfica fundada en Madrid, con una mirada narrativa para cine, eventos y marca.",
+      "Productora audiovisual y cinematográfica fundada en Madrid, con una mirada narrativa para cine, eventos y marcas.",
   },
   {
-    src: "/images/hero-location.png",
+    src: "/images/madrid 1.png",
     eyebrow: "Madrid. México. Mundo.",
     title: "Contenido con identidad propia y proyección profesional.",
     description:
       "Integramos creatividad, estrategia visual y sensibilidad narrativa para proyectos con recorrido real.",
   },
   {
-    src: "/images/hero-postproduction.png",
+    src: "/images/2S2A7980(1).webp",
     eyebrow: "Idea. Rodaje. Entrega.",
     title: "Del concepto al corte final.",
     description:
@@ -97,7 +97,7 @@ export const portfolioProjects = [
     category: "Producción cinematográfica",
     year: "2025",
     status: "Narrativa visual",
-    image: "/images/portfolio/cine.png",
+    image: "/images/portfolio/cine/cine.png",
     videoSrc: "/videos/cine.mp4",
     description:
       "Piezas de ficción y proyectos audiovisuales con dirección narrativa, puesta en escena y una mirada cinematográfica reconocible.",
@@ -115,14 +115,14 @@ export const portfolioProjects = [
         ],
       },
     ],
-    cast: ["Lucía Díez", "Nicolas Illoro", "Janick"],
+    cast: ["Lucía Díez", "Nicolás Illoro", "Janick"],
     deliverables: ["Dirección", "Producción", "Postproducción"],
     gallery: [
       {
         type: "video",
         label: "Pieza principal",
         src: "/videos/cine.mp4",
-        poster: "/images/portfolio/cine.png",
+        poster: "/images/portfolio/cine/cine.png",
       },
       {
         type: "image",
@@ -457,6 +457,42 @@ export const portfolioProjects = [
         src: "/images/portfolio/eventos/eventos-17.jpg",
         poster: "/images/portfolio/eventos/eventos-17.jpg",
       },
+      {
+        type: "image",
+        label: "Evento 18",
+        src: "/images/portfolio/eventos/eventos-18.jpeg",
+        poster: "/images/portfolio/eventos/eventos-18.jpeg",
+      },
+      {
+        type: "image",
+        label: "Evento 19",
+        src: "/images/portfolio/eventos/eventos-19.jpeg",
+        poster: "/images/portfolio/eventos/eventos-19.jpeg",
+      },
+      {
+        type: "image",
+        label: "Evento 20",
+        src: "/images/portfolio/eventos/eventos-20.jpeg",
+        poster: "/images/portfolio/eventos/eventos-20.jpeg",
+      },
+      {
+        type: "image",
+        label: "Evento 21",
+        src: "/images/portfolio/eventos/eventos-21.jpeg",
+        poster: "/images/portfolio/eventos/eventos-21.jpeg",
+      },
+      {
+        type: "image",
+        label: "Evento 22",
+        src: "/images/portfolio/eventos/eventos-22.jpeg",
+        poster: "/images/portfolio/eventos/eventos-22.jpeg",
+      },
+      {
+        type: "image",
+        label: "Evento 23",
+        src: "/images/portfolio/eventos/eventos-23.jpeg",
+        poster: "/images/portfolio/eventos/eventos-23.jpeg",
+      },
     ],
     tags: ["Eventos", "Documental", "Entrega"],
   },
@@ -469,12 +505,12 @@ export const portfolioProjects = [
     image: "/images/portfolio/corporativo.png",
     videoSrc: "/videos/corporativo.mp4",
     description:
-      "Videos corporativos y comerciales orientados a comunicar valor, reforzar marca y presentar proyectos con acabado profesional.",
+      "Vídeos corporativos y comerciales orientados a comunicar valor, reforzar la marca y presentar proyectos con acabado profesional.",
     detail:
       "Piezas corporativas enfocadas en explicar, presentar y reforzar confianza. El lenguaje visual combina claridad comercial con acabado cinematográfico para marcas, empresas y proyectos institucionales.",
     client: "Empresas y marcas",
     location: "España",
-    deliverables: ["Video corporativo", "Marca", "Postproducción"],
+    deliverables: ["Vídeo corporativo", "Marca", "Postproducción"],
     gallery: [
       {
         type: "video",

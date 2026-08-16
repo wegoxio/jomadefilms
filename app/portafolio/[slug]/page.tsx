@@ -6,6 +6,7 @@ import { portfolioProjects } from "@/components/home/content";
 import { ArrowRightIcon } from "@/components/home/icons";
 import { SiteFooter } from "@/components/home/site-footer";
 import { SiteNavbar } from "@/components/navigation/site-navbar";
+import { CineProjectShowcase } from "@/components/pages/cine-project-showcase";
 import { PortfolioDetailGallery } from "@/components/pages/portfolio-detail-gallery";
 
 type PortfolioDetailRouteProps = {
@@ -72,7 +73,7 @@ export default async function PortfolioDetailRoute({
             <p className="text-xs uppercase tracking-[0.3em] text-[#d7bb7b]">
               {project.category}
             </p>
-            <h1 className="mt-5 text-6xl leading-[0.9] text-[#f5efe1] sm:text-8xl lg:text-[112px]">
+            <h1 className="mt-5 text-5xl leading-[0.9] text-[#f5efe1] sm:text-8xl lg:text-[112px]">
               {project.title}
             </h1>
             <p className="mt-7 max-w-[720px] text-lg leading-8 text-[#ded4c2]/78">
@@ -82,6 +83,9 @@ export default async function PortfolioDetailRoute({
         </div>
       </section>
 
+      {project.slug === "cine" ? (
+        <CineProjectShowcase pisoPilotoAssets={project.gallery} />
+      ) : (
       <section className="px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
         <div className="mx-auto grid max-w-[1240px] gap-10 lg:grid-cols-[1.12fr_0.88fr]">
           <div className="lg:sticky lg:top-28 lg:h-fit">
@@ -189,6 +193,7 @@ export default async function PortfolioDetailRoute({
           </aside>
         </div>
       </section>
+      )}
 
       <SiteFooter />
     </main>

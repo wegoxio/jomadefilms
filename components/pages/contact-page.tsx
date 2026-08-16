@@ -22,7 +22,7 @@ export function ContactPage() {
 
       <section className="relative isolate overflow-hidden px-4 pb-16 pt-30 sm:px-6 lg:px-8 lg:pt-36">
         <Image
-          src="/images/hero-location.png"
+          src="/images/pexels-thisispav-30622038.jpg"
           alt=""
           fill
           sizes="100vw"
@@ -48,7 +48,7 @@ export function ContactPage() {
 
           <div className="animate-page-in animate-page-in-delay border border-[#d7bb7b]/16 bg-[#1d1c1a]/86 p-6 backdrop-blur">
             <p className="text-[10px] uppercase tracking-[0.26em] text-[#d7bb7b]">
-              Brief express
+              Brief exprés
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3">
               {briefItems.map((item, index) => (

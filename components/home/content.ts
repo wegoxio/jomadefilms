@@ -24,7 +24,7 @@ export const heroSlides = [
   },
   {
     src: "/images/madrid 1.png",
-    eyebrow: "Madrid. México. Mundo.",
+    eyebrow: "Madrid. Historias para el mundo.",
     title: "Contenido con identidad propia y proyección profesional.",
     description:
       "Integramos creatividad, estrategia visual y sensibilidad narrativa para proyectos con recorrido real.",
@@ -160,30 +160,6 @@ export const portfolioProjects = [
         src: "/images/portfolio/cine/piso-piloto-06.webp",
         poster: "/images/portfolio/cine/piso-piloto-06.webp",
       },
-      {
-        type: "image",
-        label: "Escena 07",
-        src: "/images/portfolio/cine/piso-piloto-07.webp",
-        poster: "/images/portfolio/cine/piso-piloto-07.webp",
-      },
-      {
-        type: "image",
-        label: "Escena 08",
-        src: "/images/portfolio/cine/piso-piloto-08.webp",
-        poster: "/images/portfolio/cine/piso-piloto-08.webp",
-      },
-      {
-        type: "image",
-        label: "Escena 09",
-        src: "/images/portfolio/cine/piso-piloto-09.webp",
-        poster: "/images/portfolio/cine/piso-piloto-09.webp",
-      },
-      {
-        type: "image",
-        label: "Escena 10",
-        src: "/images/portfolio/cine/piso-piloto-10.webp",
-        poster: "/images/portfolio/cine/piso-piloto-10.webp",
-      },
     ],
     tags: ["Ficción", "Dirección", "Cine"],
   },
@@ -191,126 +167,34 @@ export const portfolioProjects = [
     slug: "bodas",
     title: "Bodas",
     category: "Cobertura y narrativa de bodas",
-    year: "2022-2026",
-    status: "Momentos reales",
+    year: "2025",
+    status: "Bodas en Francia",
     image: "/images/portfolio/bodas/bodas-01.jpg",
     videoSrc: "",
     description:
-      "Cobertura cinematográfica de bodas con un enfoque emocional, elegante y documental para conservar cada instante con una identidad visual propia.",
+      "Dos historias de boda filmadas en Francia durante 2025: una celebración en París y otra en Morlaix, narradas con una mirada emocional, elegante y documental.",
     detail:
-      "Proyectos de bodas pensados como relatos íntimos: emoción, sensibilidad narrativa y un lenguaje visual cuidado para convertir cada celebración en un recuerdo con alma.",
+      "Coberturas internacionales en París y Morlaix pensadas como relatos íntimos: emoción, sensibilidad narrativa y un lenguaje visual cuidado para convertir cada celebración en un recuerdo con alma.",
     client: "Parejas y celebraciones",
-    location: "España",
+    location: "París y Morlaix, Francia",
     deliverables: ["Cobertura", "Edición", "Entrega digital"],
     gallery: [
-      {
-        type: "image",
-        label: "Bodas 01",
-        src: "/images/portfolio/bodas/bodas-01.jpg",
-        poster: "/images/portfolio/bodas/bodas-01.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 02",
-        src: "/images/portfolio/bodas/bodas-02.webp",
-        poster: "/images/portfolio/bodas/bodas-02.webp",
-      },
-      {
-        type: "image",
-        label: "Bodas 03",
-        src: "/images/portfolio/bodas/bodas-03.jpg",
-        poster: "/images/portfolio/bodas/bodas-03.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 04",
-        src: "/images/portfolio/bodas/bodas-04.jpg",
-        poster: "/images/portfolio/bodas/bodas-04.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 05",
-        src: "/images/portfolio/bodas/bodas-05.jpg",
-        poster: "/images/portfolio/bodas/bodas-05.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 06",
-        src: "/images/portfolio/bodas/bodas-06.jpg",
-        poster: "/images/portfolio/bodas/bodas-06.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 07",
-        src: "/images/portfolio/bodas/bodas-07.jpg",
-        poster: "/images/portfolio/bodas/bodas-07.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 08",
-        src: "/images/portfolio/bodas/bodas-08.jpg",
-        poster: "/images/portfolio/bodas/bodas-08.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 09",
-        src: "/images/portfolio/bodas/bodas-09.jpg",
-        poster: "/images/portfolio/bodas/bodas-09.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 10",
-        src: "/images/portfolio/bodas/bodas-10.jpg",
-        poster: "/images/portfolio/bodas/bodas-10.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 11",
-        src: "/images/portfolio/bodas/bodas-11.jpg",
-        poster: "/images/portfolio/bodas/bodas-11.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 12",
-        src: "/images/portfolio/bodas/bodas-12.jpg",
-        poster: "/images/portfolio/bodas/bodas-12.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 13",
-        src: "/images/portfolio/bodas/bodas-13.jpg",
-        poster: "/images/portfolio/bodas/bodas-13.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 14",
-        src: "/images/portfolio/bodas/bodas-14.jpg",
-        poster: "/images/portfolio/bodas/bodas-14.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 15",
-        src: "/images/portfolio/bodas/bodas-15.jpg",
-        poster: "/images/portfolio/bodas/bodas-15.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 16",
-        src: "/images/portfolio/bodas/bodas-16.jpg",
-        poster: "/images/portfolio/bodas/bodas-16.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 17",
-        src: "/images/portfolio/bodas/bodas-17.jpg",
-        poster: "/images/portfolio/bodas/bodas-17.jpg",
-      },
-      {
-        type: "image",
-        label: "Bodas 18",
-        src: "/images/portfolio/bodas/bodas-18.jpg",
-        poster: "/images/portfolio/bodas/bodas-18.jpg",
-      },
+      ...["01.jpg", "02.webp", "03.jpg", "04.jpg", "05.jpg", "06.jpg"].map(
+        (file, index) => ({
+          type: "image",
+          label: `París ${String(index + 1).padStart(2, "0")}`,
+          src: `/images/portfolio/bodas/bodas-${file}`,
+          poster: `/images/portfolio/bodas/bodas-${file}`,
+        }),
+      ),
+      ...["10.jpg", "11.jpg", "13.jpg", "14.jpg", "16.jpg", "18.jpg"].map(
+        (file, index) => ({
+          type: "image",
+          label: `Morlaix ${String(index + 1).padStart(2, "0")}`,
+          src: `/images/portfolio/bodas/bodas-${file}`,
+          poster: `/images/portfolio/bodas/bodas-${file}`,
+        }),
+      ),
     ],
     tags: ["Bodas", "Emoción", "Narrativa"],
   },
@@ -321,7 +205,7 @@ export const portfolioProjects = [
     year: "2022-2026",
     status: "Ritmo y escena",
     image: "/images/portfolio/musica.png",
-    videoSrc: "/videos/musica.mp4",
+    videoSrc: "/videos/Musica_WP_V2.mov",
     description:
       "Producción de contenido musical con energía visual, lectura del artista y montaje pensado para reforzar la identidad de cada pieza.",
     detail:
@@ -333,7 +217,7 @@ export const portfolioProjects = [
       {
         type: "video",
         label: "Pieza principal",
-        src: "/videos/musica.mp4",
+        src: "/videos/Musica_WP_V2.mov",
         poster: "/images/portfolio/musica.png",
       },
     ],
@@ -345,7 +229,7 @@ export const portfolioProjects = [
     category: "Cobertura audiovisual",
     year: "2022-2026",
     status: "Momentos reales",
-    image: "/images/portfolio/eventos/eventos-01.jpg",
+    image: "/images/portfolio/eventos/eventos-18.jpeg",
     videoSrc: "/videos/eventos.mp4",
     description:
       "Registro de eventos con sensibilidad documental, ritmo de edición y capacidad para convertir momentos clave en piezas memorables.",
@@ -359,7 +243,7 @@ export const portfolioProjects = [
         type: "video",
         label: "Pieza principal",
         src: "/videos/eventos.mp4",
-        poster: "/images/portfolio/eventos/eventos-01.jpg",
+        poster: "/images/portfolio/eventos/eventos-18.jpeg",
       },
       {
         type: "image",
@@ -503,7 +387,7 @@ export const portfolioProjects = [
     year: "2022-2026",
     status: "Comunicación visual",
     image: "/images/portfolio/corporativo.png",
-    videoSrc: "/videos/corporativo.mp4",
+    videoSrc: "/videos/Corporativo_WP_V2.mov",
     description:
       "Vídeos corporativos y comerciales orientados a comunicar valor, reforzar la marca y presentar proyectos con acabado profesional.",
     detail:
@@ -515,7 +399,7 @@ export const portfolioProjects = [
       {
         type: "video",
         label: "Pieza principal",
-        src: "/videos/corporativo.mp4",
+        src: "/videos/Corporativo_WP_V2.mov",
         poster: "/images/portfolio/corporativo.png",
       },
     ],
@@ -526,11 +410,13 @@ export const portfolioProjects = [
 export const stats: Stat[] = [
   { value: "2025", label: "Fundación en Madrid", icon: "badge" },
   { value: "04", label: "Líneas audiovisuales", icon: "clapper" },
-  { value: "02", label: "Mercados activos", icon: "globe" },
+  { value: "Global", label: "Vocación internacional", icon: "globe" },
   { value: "100%", label: "Compromiso creativo", icon: "spark" },
 ];
 
-export const films: Film[] = portfolioProjects.map((project, index) => ({
+export const films: Film[] = portfolioProjects
+  .filter((project) => project.slug !== "bodas")
+  .map((project, index) => ({
   title: project.title,
   meta: `${project.year} - ${project.category}`,
   gradient:
@@ -539,7 +425,7 @@ export const films: Film[] = portfolioProjects.map((project, index) => ({
       : index === 1
         ? "from-[#202733] via-[#3e4f5f] to-[#1a2028]"
         : "from-[#423121] via-[#7a5c41] to-[#2a2018]",
-}));
+  }));
 
 export const processSteps: ProcessStep[] = [
   { label: "Idea y concepto", icon: "idea" },
@@ -552,7 +438,5 @@ export const processSteps: ProcessStep[] = [
 export const reasons = philosophyPillars.map((pillar) => pillar.title);
 
 export const socialLinks: SocialLink[] = [
-  { name: "Instagram", href: "#" },
-  { name: "Facebook", href: "#" },
-  { name: "LinkedIn", href: "#" },
+  { name: "Instagram", href: "https://www.instagram.com/jomade.films/" },
 ];

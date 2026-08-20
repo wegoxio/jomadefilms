@@ -55,11 +55,11 @@ export function PhilosophyPage() {
 
       <section className="relative isolate min-h-svh overflow-hidden px-4 pb-20 pt-30 sm:px-6 lg:px-8 lg:pt-36">
         <Image
-          src="/images/2S2A8555.JPG"
+          src="/images/FILOSOFÍA.png"
           alt=""
           fill
           sizes="100vw"
-          className="absolute inset-0 -z-20 object-cover object-[58%_center] opacity-80"
+          className="absolute inset-0 -z-20 object-cover object-center opacity-80"
           priority
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.94)_0%,rgba(0,0,0,0.72)_47%,rgba(0,0,0,0.2)_100%),linear-gradient(180deg,rgba(40,39,37,0.08)_0%,#282725_100%)]" />

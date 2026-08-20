@@ -70,13 +70,17 @@ export function SiteFooter() {
                 <MapPinIcon className="h-3.5 w-3.5 text-[#d7bb7b]" />
                 Madrid, España
               </li>
-              <li className="flex items-center gap-2">
-                <PhoneIcon className="h-3.5 w-3.5 text-[#d7bb7b]" />
-                +34 600 000 000
+              <li>
+                <a href="https://wa.me/34695951166" target="_blank" rel="noreferrer" className="flex items-center gap-2 transition-colors hover:text-[#d7bb7b]">
+                  <PhoneIcon className="h-3.5 w-3.5 text-[#d7bb7b]" />
+                  +34 695 951 166
+                </a>
               </li>
-              <li className="flex items-center gap-2">
-                <MailIcon className="h-3.5 w-3.5 text-[#d7bb7b]" />
-                hola@jomadefilms.com
+              <li>
+                <a href="mailto:jomadefilms@hotmail.com" className="flex items-center gap-2 transition-colors hover:text-[#d7bb7b]">
+                  <MailIcon className="h-3.5 w-3.5 text-[#d7bb7b]" />
+                  jomadefilms@hotmail.com
+                </a>
               </li>
             </ul>
             <Link

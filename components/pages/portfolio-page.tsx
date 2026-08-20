@@ -69,7 +69,9 @@ export function PortfolioPage() {
               </aside>
 
               <div className="space-y-8">
-                {portfolioProjects.map((project, index) => (
+                {portfolioProjects
+                  .filter((project) => project.slug !== "bodas")
+                  .map((project, index) => (
                   <ScrollReveal key={project.title} delay={index * 120}>
                     <article className="group grid overflow-hidden border border-[#d7bb7b]/12 bg-[#201f1d] transition-all duration-700 hover:border-[#d7bb7b]/42 lg:grid-cols-[0.92fr_1.08fr]">
                       <PortfolioVideoCard
@@ -120,7 +122,7 @@ export function PortfolioPage() {
                       </div>
                     </article>
                   </ScrollReveal>
-                ))}
+                  ))}
               </div>
             </div>
           </ScrollReveal>

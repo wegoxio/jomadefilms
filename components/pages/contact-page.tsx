@@ -6,6 +6,7 @@ import {
   MailIcon,
   MapPinIcon,
   PhoneIcon,
+  SocialIcon,
   SparkleIcon,
 } from "@/components/home/icons";
 import { ScrollReveal } from "@/components/home/scroll-reveal";
@@ -22,11 +23,11 @@ export function ContactPage() {
 
       <section className="relative isolate overflow-hidden px-4 pb-16 pt-30 sm:px-6 lg:px-8 lg:pt-36">
         <Image
-          src="/images/pexels-thisispav-30622038.jpg"
+          src="/images/FILOSOFIA 3.jpeg"
           alt=""
           fill
           sizes="100vw"
-          className="absolute inset-0 -z-20 object-cover opacity-[0.28]"
+          className="absolute inset-0 -z-20 object-cover object-center opacity-[0.42]"
           priority
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.68)_50%,rgba(40,39,37,0.86)_100%),linear-gradient(180deg,rgba(40,39,37,0.2)_0%,#282725_100%)]" />
@@ -82,11 +83,18 @@ export function ContactPage() {
                 />
                 <ContactLine
                   icon={<PhoneIcon className="h-4 w-4" />}
-                  text="+34 600 000 000"
+                  text="+34 695 951 166"
+                  href="https://wa.me/34695951166"
                 />
                 <ContactLine
                   icon={<MailIcon className="h-4 w-4" />}
-                  text="hola@jomadefilms.com"
+                  text="jomadefilms@hotmail.com"
+                  href="mailto:jomadefilms@hotmail.com"
+                />
+                <ContactLine
+                  icon={<SocialIcon name="Instagram" />}
+                  text="@jomade.films"
+                  href="https://www.instagram.com/jomade.films/"
                 />
               </div>
             </aside>
@@ -118,7 +126,7 @@ export function ContactPage() {
 
               <div className="mt-7 grid gap-4 md:grid-cols-2">
                 <Input label="Fecha estimada" placeholder="Mes / año" />
-                <Input label="Ubicación" placeholder="Madrid, México..." />
+                <Input label="Ubicación" placeholder="Ciudad / país" />
               </div>
 
               <label className="mt-7 block">
@@ -176,9 +184,21 @@ export function ContactPage() {
   );
 }
 
-function ContactLine({ icon, text }: { icon: ReactNode; text: string }) {
+function ContactLine({ icon, text, href }: { icon: ReactNode; text: string; href?: string }) {
+  const className = "flex items-center gap-3 border border-[#d7bb7b]/12 bg-[#201f1d] px-4 py-3 text-sm text-[#ded4c2]/76 transition-colors hover:border-[#d7bb7b]/42 hover:text-[#f5efe1]";
+
+  if (href) {
+    const external = href.startsWith("http");
+    return (
+      <a href={href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} className={className}>
+        <span className="text-[#d7bb7b]">{icon}</span>
+        {text}
+      </a>
+    );
+  }
+
   return (
-    <div className="flex items-center gap-3 border border-[#d7bb7b]/12 bg-[#201f1d] px-4 py-3 text-sm text-[#ded4c2]/76">
+    <div className={className}>
       <span className="text-[#d7bb7b]">{icon}</span>
       {text}
     </div>

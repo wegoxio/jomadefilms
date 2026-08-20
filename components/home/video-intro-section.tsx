@@ -6,12 +6,13 @@ export function VideoIntroSection() {
       <div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div className="relative overflow-hidden border border-[#d7bb7b]/16 bg-[#20201e] shadow-[0_22px_70px_rgba(0,0,0,0.28)]">
           <div className="aspect-video">
-            <iframe
-              className="h-full w-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-              title="Jomade Films reel"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
+            <video
+              className="h-full w-full object-cover"
+              src="/videos/hero-section-02.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              aria-label="Reel de Jomade Films"
             />
           </div>
           <div className="pointer-events-none absolute left-4 top-4 inline-flex items-center gap-2 border border-[#d7bb7b]/30 bg-black/50 px-3 py-2 text-[10px] uppercase tracking-[0.2em] text-[#f5efe1]/78 backdrop-blur">

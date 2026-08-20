@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import { portfolioProjects } from "@/components/home/content";
 import { ArrowRightIcon } from "@/components/home/icons";
 import { SiteFooter } from "@/components/home/site-footer";
 import { SiteNavbar } from "@/components/navigation/site-navbar";
 import { CineProjectShowcase } from "@/components/pages/cine-project-showcase";
+import { CorporateProjectShowcase } from "@/components/pages/corporate-project-showcase";
+import { EventsProjectShowcase } from "@/components/pages/events-project-showcase";
 import { PortfolioDetailGallery } from "@/components/pages/portfolio-detail-gallery";
 
 type PortfolioDetailRouteProps = {
@@ -16,13 +18,20 @@ type PortfolioDetailRouteProps = {
 };
 
 export function generateStaticParams() {
-  return portfolioProjects.map((project) => ({
+  return portfolioProjects.filter((project) => project.slug !== "bodas").map((project) => ({
     slug: project.slug,
   }));
 }
 
 export async function generateMetadata({ params }: PortfolioDetailRouteProps) {
   const { slug } = await params;
+  if (slug === "bodas") {
+    return {
+      title: "Eventos y bodas | Jomade Films",
+      description:
+        "Cobertura cinematográfica de eventos y bodas con sensibilidad documental y narrativa visual.",
+    };
+  }
   const project = portfolioProjects.find((item) => item.slug === slug);
 
   if (!project) {
@@ -39,7 +48,12 @@ export default async function PortfolioDetailRoute({
   params,
 }: PortfolioDetailRouteProps) {
   const { slug } = await params;
+  if (slug === "bodas") {
+    redirect("/portafolio/eventos");
+  }
   const project = portfolioProjects.find((item) => item.slug === slug);
+  const weddingProject = portfolioProjects.find((item) => item.slug === "bodas");
+  const eventProject = portfolioProjects.find((item) => item.slug === "eventos");
 
   if (!project) {
     notFound();
@@ -85,6 +99,37 @@ export default async function PortfolioDetailRoute({
 
       {project.slug === "cine" ? (
         <CineProjectShowcase pisoPilotoAssets={project.gallery} />
+      ) : project.slug === "eventos" && weddingProject ? (
+        <EventsProjectShowcase
+          eventAssets={project.gallery.filter(
+            (asset) => asset.type === "video" || asset.src.endsWith(".jpeg"),
+          )}
+          weddingAssets={weddingProject.gallery}
+          baptismAssets={[
+            "IMG_8343.jpg",
+            "IMG_8352.jpg",
+            "IMG_8356.jpeg",
+            "IMG_8356.jpg",
+            "IMG_8377.jpg",
+            "IMG_8382.jpg",
+          ].map((filename, index) => ({
+            type: "image",
+            label: `Bautizo en Zamora ${String(index + 1).padStart(2, "0")}`,
+            src: `/images/${filename}`,
+            poster: `/images/${filename}`,
+          }))}
+        />
+      ) : project.slug === "corporativo" && eventProject ? (
+        <CorporateProjectShowcase
+          corporateAssets={project.gallery}
+          embassyAssets={eventProject.gallery.filter(
+            (asset) =>
+              asset.type === "image" &&
+              asset.src.endsWith(".jpg") &&
+              !asset.src.endsWith("eventos-01.jpg") &&
+              !asset.src.endsWith("eventos-02.jpg"),
+          )}
+        />
       ) : (
       <section className="px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
         <div className="mx-auto grid max-w-[1240px] gap-10 lg:grid-cols-[1.12fr_0.88fr]">

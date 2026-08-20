@@ -38,6 +38,7 @@ const films = [
     genre: "Drama / Comedia",
     year: "Producido 2025",
     status: "Comercializado 2026",
+    director: "Paula R.",
     logline: "Han encontrado el piso perfecto, pero no pueden salir de él.",
     synopsis:
       "Cortometraje de drama y comedia que explora, con humor y misterio, los miedos y contradicciones de dar el paso hacia la convivencia.",
@@ -49,6 +50,7 @@ const films = [
     genre: "Drama / Comedia",
     year: "Producido 2025",
     status: "En proceso de comercialización",
+    director: "Juan GQ.",
     synopsis:
       "Alba B. Morena, una autora reconocida, ha estado alejada del mundo literario durante dos años tras el fracaso de su último libro. Enfrentando una depresión y una vida personal en ruinas, recibe un ultimátum de su editora: tiene seis meses para entregar una nueva obra o perderá su contrato.",
   },
@@ -161,6 +163,7 @@ export function CineProjectShowcase({
               <div className="mt-9 grid gap-4 border-t border-[#d7bb7b]/12 pt-7 sm:grid-cols-2">
                 <FilmFact label="Producción" value={activeFilm.year} />
                 <FilmFact label="Estado" value={activeFilm.status} />
+                <FilmFact label="Dirección" value={activeFilm.director} />
               </div>
 
               {activeFilm.id === "piso-piloto" ? (
@@ -180,10 +183,9 @@ export function CineProjectShowcase({
                         Recorrido en festivales
                       </p>
                       <p className="mt-3 text-sm leading-7 text-[#ded4c2]/76">
-                        Una ficción española de 15 minutos dirigida por Paula
-                        Rodrigo y producida por Catastral Media junto a Jomade
-                        Films, presente en selecciones y muestras nacionales e
-                        internacionales.
+                        Una ficción española de 15 minutos producida por
+                        Catastral Media junto a Jomade Films, presente en
+                        selecciones y muestras nacionales e internacionales.
                       </p>
                     </div>
                   </div>

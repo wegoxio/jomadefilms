@@ -15,7 +15,7 @@ const pathways = [
   },
   {
     label: "Portafolio",
-    title: "Ficción y proyectos comerciales entre México y España.",
+    title: "Ficción y proyectos comerciales con proyección internacional.",
     href: "/portafolio",
   },
 ];

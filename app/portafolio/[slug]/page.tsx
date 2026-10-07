@@ -122,13 +122,22 @@ export default async function PortfolioDetailRoute({
       ) : project.slug === "corporativo" && eventProject ? (
         <CorporateProjectShowcase
           corporateAssets={project.gallery}
-          embassyAssets={eventProject.gallery.filter(
-            (asset) =>
-              asset.type === "image" &&
-              asset.src.endsWith(".jpg") &&
-              !asset.src.endsWith("eventos-01.jpg") &&
-              !asset.src.endsWith("eventos-02.jpg"),
-          )}
+          embassyAssets={eventProject.gallery
+            .filter(
+              (asset) =>
+                asset.type === "image" &&
+                asset.src.endsWith(".jpg") &&
+                ![
+                  "eventos-01.jpg",
+                  "eventos-02.jpg",
+                  "eventos-04.jpg",
+                  "eventos-14.jpg",
+                ].some((filename) => asset.src.endsWith(filename)),
+            )
+            .map((asset, index) => ({
+              ...asset,
+              label: `Evento ${String(index + 1).padStart(2, "0")}`,
+            }))}
         />
       ) : (
       <section className="px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">

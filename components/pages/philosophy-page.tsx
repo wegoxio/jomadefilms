@@ -23,20 +23,20 @@ const manifesto = [
 
 const team = [
   {
+    name: "Josemir YC.",
+    role: "Coordinación de marketing y operaciones",
+    description:
+    "Planificación de estrategias de comunicación, organización logística y gestión de equipos.",
+    image: "/images/team/JOSEMIR.jpeg",
+    position: "object-[center_28%]",
+  },
+  {
     name: "Madait YC.",
     role: "Dirección y producción",
     description:
       "Coordinación integral de proyectos de ficción, documental y marcas. Planificación, creatividad y seguimiento de cada proceso.",
-    image: "/images/team/MADAIT.webp",
+    image: "/images/team/TERUMI.jpeg",
     position: "object-[center_32%]",
-  },
-  {
-    name: "Josemir YC.",
-    role: "Coordinación de marketing y operaciones",
-    description:
-      "Planificación de estrategias de comunicación, organización logística y gestión de equipos.",
-    image: "/images/team/JOSEMIR.webp",
-    position: "object-[center_28%]",
   },
   {
     name: "Juan GQ.",

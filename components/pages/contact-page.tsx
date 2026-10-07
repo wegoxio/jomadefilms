@@ -115,7 +115,7 @@ export function ContactPage() {
                   {projectTypes.map((type) => (
                     <label
                       key={type}
-                      className="group cursor-pointer border border-[#d7bb7b]/14 bg-[#282725] px-4 py-4 text-center text-xs uppercase tracking-[0.16em] text-[#ded4c2]/72 transition-all duration-300 hover:-translate-y-1 hover:border-[#d7bb7b]/42 hover:text-[#d7bb7b]"
+                      className="group flex min-w-0 cursor-pointer items-center justify-center border border-[#d7bb7b]/14 bg-[#282725] px-2 py-4 text-center text-[10px] leading-5 uppercase tracking-[0.12em] text-[#ded4c2]/72 transition-all duration-300 hover:-translate-y-1 hover:border-[#d7bb7b]/42 hover:text-[#d7bb7b]"
                     >
                       <input type="radio" name="type" className="sr-only" />
                       {type}

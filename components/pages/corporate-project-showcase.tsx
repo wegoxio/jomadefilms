@@ -41,7 +41,7 @@ export function CorporateProjectShowcase({
       title: "Proyecto País",
       eyebrow: "Sesderma · Proyecto institucional",
       description:
-        "Cobertura del Proyecto País de Sesderma en la Embajada de Colombia en Madrid, con la participación del embajador de Colombia y del doctor encargado de presentar la iniciativa.",
+        "Cobertura de la presentación de Proyecto País de Sesderma en la Embajada de Colombia en Madrid, con la participación del embajador de Colombia y del Dr. Gabriel Serrano, dermatólogo y fundador de Sesderma. La iniciativa promueve la protección del Amazonas colombiano y la creación de empleo digno y sostenible junto a las comunidades indígenas que recolectan cacay, bajo un modelo de comercio justo.",
       year: "Madrid",
       status: "Cobertura institucional",
       client: "Sesderma",

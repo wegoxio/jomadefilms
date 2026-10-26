@@ -32,7 +32,7 @@ const team = [
     imageScale: "scale-[1.45] group-hover:scale-[1.5]",
   },
   {
-    name: "Madait YC.",
+    name: "Terumi YC.",
     role: "Dirección y producción",
     description:
       "Coordinación integral de proyectos de ficción, documental y marcas. Planificación, creatividad y seguimiento de cada proceso.",

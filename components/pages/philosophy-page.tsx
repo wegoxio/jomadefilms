@@ -29,6 +29,7 @@ const team = [
     "Planificación de estrategias de comunicación, organización logística y gestión de equipos.",
     image: "/images/team/JOSEMIR.jpeg",
     position: "object-[center_28%]",
+    imageScale: "scale-[1.45] group-hover:scale-[1.5]",
   },
   {
     name: "Madait YC.",
@@ -124,7 +125,7 @@ export function PhilosophyPage() {
                         alt={`Retrato de ${member.name}`}
                         fill
                         sizes="(min-width: 768px) 270px, 72vw"
-                        className={`object-cover ${member.position} transition-transform duration-1000 group-hover:scale-105`}
+                        className={`object-cover ${member.position} ${member.imageScale ?? "group-hover:scale-105"} transition-transform duration-1000`}
                       />
                       <div className="absolute inset-0 rounded-full bg-[linear-gradient(180deg,transparent_58%,rgba(0,0,0,0.32)_100%)]" />
                     </div>
@@ -133,10 +134,10 @@ export function PhilosophyPage() {
                   <h3 className="mt-10 text-3xl text-[#f5efe1]">
                     {member.name}
                   </h3>
-                  <p className="mt-3 min-h-10 text-xs uppercase leading-5 tracking-[0.2em] text-[#d7bb7b]">
+                  <p className="mt-3 flex min-h-10 items-center justify-center text-xs uppercase leading-5 tracking-[0.2em] text-[#d7bb7b]">
                     {member.role}
                   </p>
-                  <p className="mt-5 text-sm leading-7 text-[#ded4c2]/72">
+                  <p className="min-h-[8rem] text-sm leading-7 text-[#ded4c2]/72">
                     {member.description}
                   </p>
                 </article>

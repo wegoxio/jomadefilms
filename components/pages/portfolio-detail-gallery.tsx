@@ -10,6 +10,7 @@ type GalleryAsset = {
   label: string;
   src: string;
   poster?: string;
+  location?: string;
 };
 
 type PortfolioDetailGalleryProps = {
@@ -133,6 +134,11 @@ export function PortfolioDetailGallery({
               priority
             />
           )}
+          {activeAsset.location ? (
+            <span className="absolute left-5 top-5 border border-[#d7bb7b]/55 bg-[#171614]/85 px-3 py-2 text-[10px] uppercase tracking-[0.24em] text-[#d7bb7b] backdrop-blur-sm">
+              {activeAsset.location}
+            </span>
+          ) : null}
         </div>
       </div>
 
@@ -186,6 +192,11 @@ export function PortfolioDetailGallery({
                 <span className="absolute bottom-2 left-2 right-2 text-left text-[10px] uppercase tracking-[0.16em] text-[#f5efe1]">
                   {asset.label}
                 </span>
+                {asset.location ? (
+                  <span className="absolute left-2 top-2 bg-[#171614]/85 px-2 py-1 text-[8px] uppercase tracking-[0.18em] text-[#d7bb7b]">
+                    {asset.location}
+                  </span>
+                ) : null}
               </button>
             );
           })}

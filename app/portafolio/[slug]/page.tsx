@@ -106,17 +106,17 @@ export default async function PortfolioDetailRoute({
           )}
           weddingAssets={weddingProject.gallery}
           baptismAssets={[
-            "IMG_8343.jpg",
-            "IMG_8352.jpg",
-            "IMG_8356.jpeg",
-            "IMG_8356.jpg",
-            "IMG_8377.jpg",
-            "IMG_8382.jpg",
+            "bautizo-01.jpg",
+            "bautizo-02.jpg",
+            "bautizo-03.jpg",
+            "bautizo-04.jpg",
+            "bautizo-05.jpg",
+            "bautizo-06.jpeg",
           ].map((filename, index) => ({
             type: "image",
             label: `Bautizo en Zamora ${String(index + 1).padStart(2, "0")}`,
-            src: `/images/${filename}`,
-            poster: `/images/${filename}`,
+            src: `/images/bautizos/${filename}`,
+            poster: `/images/bautizos/${filename}`,
           }))}
         />
       ) : project.slug === "corporativo" && eventProject ? (

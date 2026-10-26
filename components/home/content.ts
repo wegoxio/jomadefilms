@@ -182,7 +182,8 @@ export const portfolioProjects = [
       ...["01.jpg", "02.webp", "03.jpg", "04.jpg", "05.jpg", "06.jpg"].map(
         (file, index) => ({
           type: "image",
-          label: `París ${String(index + 1).padStart(2, "0")}`,
+          label: `Boda ${String(index + 1).padStart(2, "0")}`,
+          location: "París",
           src: `/images/portfolio/bodas/bodas-${file}`,
           poster: `/images/portfolio/bodas/bodas-${file}`,
         }),
@@ -199,7 +200,10 @@ export const portfolioProjects = [
         "21.jpg",
       ].map((file, index) => ({
         type: "image",
-        label: `Morlaix ${String(index + 1).padStart(2, "0")}`,
+        label: `Boda ${String(index + 7).padStart(2, "0")}`,
+        location: [9, 10, 11, 13, 15].includes(index + 7)
+          ? "Morlaix"
+          : "París",
         src: `/images/portfolio/bodas/bodas-${file}`,
         poster: `/images/portfolio/bodas/bodas-${file}`,
       })),

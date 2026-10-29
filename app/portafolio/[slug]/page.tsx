@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: PortfolioDetailRouteProps) {
       title: "Eventos y bodas | Jomade Films",
       description:
         "Cobertura cinematográfica de eventos y bodas con sensibilidad documental y narrativa visual.",
+      alternates: { canonical: "/portafolio/eventos" },
     };
   }
   const project = portfolioProjects.find((item) => item.slug === slug);
@@ -41,6 +42,7 @@ export async function generateMetadata({ params }: PortfolioDetailRouteProps) {
   return {
     title: `${project.title} | Jomade Films`,
     description: project.description,
+    alternates: { canonical: `/portafolio/${project.slug}` },
   };
 }
 

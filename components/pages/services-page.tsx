@@ -41,15 +41,14 @@ export function ServicesPage() {
         <div className="mx-auto grid min-h-[calc(100svh-9rem)] max-w-[1240px] items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="animate-page-in">
             <p className="text-xs uppercase tracking-[0.32em] text-[#d7bb7b]">
-              Servicios
+              Nuestro servicio
             </p>
             <h1 className="mt-6 max-w-[820px] text-5xl leading-[0.98] text-[#f5efe1] sm:text-7xl lg:text-[88px]">
-              Producción audiovisual con lenguaje de cine.
+              Arte en Movimiento
             </h1>
             <p className="mt-7 max-w-[600px] text-base leading-8 text-[#ded4c2]/78">
-              Desde una pieza de ficción hasta contenido para eventos o marca,
-              Jomade trabaja cada proyecto con dirección creativa, precisión
-              técnica y una estética cinematográfica.
+              Desarrollamos proyectos cinematográficos completos con estándares
+              de la industria y narrativa visual excepcional.
             </p>
             <Link
               href="/contacto"

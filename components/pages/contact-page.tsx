@@ -83,8 +83,13 @@ export function ContactPage() {
                 />
                 <ContactLine
                   icon={<PhoneIcon className="h-4 w-4" />}
-                  text="+34 695 951 166"
+                  text="695 951 166"
                   href="https://wa.me/34695951166"
+                />
+                <ContactLine
+                  icon={<PhoneIcon className="h-4 w-4" />}
+                  text="601 472 419"
+                  href="https://wa.me/34601472419"
                 />
                 <ContactLine
                   icon={<MailIcon className="h-4 w-4" />}

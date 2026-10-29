@@ -255,8 +255,12 @@ export function PhilosophyPage() {
                   Misión
                 </p>
                 <p className="mt-5 text-2xl leading-10 text-[#f5efe1]">
-                  Liderar la creación de piezas audiovisuales de alto impacto
-                  cinematográfico, con excelencia técnica y narrativa.
+                  Liderar la industria de los eventos y el entretenimiento
+                  mediante la creación de piezas cinematográficas de alto
+                  impacto. Nuestra misión es desarrollar proyectos de excelencia
+                  técnica y narrativa que no solo satisfagan a nuestros clientes,
+                  sino que sean reconocidos y valorados en los mercados y
+                  festivales de cine más prestigiosos a nivel global.
                 </p>
               </article>
             </ScrollReveal>
@@ -266,9 +270,10 @@ export function PhilosophyPage() {
                   Visión
                 </p>
                 <p className="mt-5 text-2xl leading-10 text-[#f5efe1]">
-                  Consolidarse como productora reconocida por calidad,
-                  innovación y compromiso creativo en el mercado europeo e
-                  internacional.
+                  Tener una cartera de clientes sólida y ser los mejores en
+                  Europa. Nuestra meta es convertirnos en una de las productoras
+                  más reconocidas del continente y, con el paso del tiempo, llegar
+                  a ser una de las más importantes del mundo.
                 </p>
               </article>
             </ScrollReveal>

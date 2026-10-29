@@ -40,27 +40,27 @@ export const heroSlides = [
 
 export const serviceCards: Service[] = [
   {
-    title: "Producción cinematográfica",
+    title: "Ficción y documentales",
     description:
-      "Desarrollo y producción de piezas de ficción con identidad visual, estructura narrativa y criterio de industria.",
+      "Desarrollamos proyectos cinematográficos completos con estándares de la industria y narrativa visual excepcional.",
     icon: "clapper",
   },
   {
     title: "Eventos",
     description:
-      "Cobertura y piezas audiovisuales para eventos, concebidas con ritmo, atmósfera y lenguaje cinematográfico.",
+      "Capturamos los momentos más importantes como bodas, comuniones, bautizos y celebraciones con una mirada artística y creativa, incluyendo fotografía profesional.",
     icon: "play",
   },
   {
-    title: "Publicidad y marca",
+    title: "Corporativo",
     description:
-      "Contenido para marcas que conecta comunicación audiovisual, dirección creativa e impacto emocional.",
+      "Potenciamos la imagen de tu empresa con contenido audiovisual profesional que comunica valores, fortalece la marca y conecta con tu audiencia objetivo.",
     icon: "megaphone",
   },
   {
     title: "Postproducción",
     description:
-      "Edición, color, montaje y acabado final para convertir el material en una pieza precisa y memorable.",
+      "Montaje, diseño sonoro y corrección de color de alta precisión.",
     icon: "film",
   },
 ];

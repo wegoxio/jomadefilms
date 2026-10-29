@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { FormEvent, useState } from "react";
 import type { ReactNode } from "react";
 
 import {
@@ -17,6 +20,17 @@ const projectTypes = ["Cine", "Evento", "Marca", "Postproducción"];
 const briefItems = ["Objetivo", "Fecha", "Ubicación", "Referencias"];
 
 export function ContactPage() {
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault(); setStatus("sending");
+    const form = event.currentTarget;
+    try {
+      const response = await fetch("/api/contacto", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(form).entries())) });
+      if (!response.ok) throw new Error("Request failed");
+      form.reset(); setStatus("success");
+    } catch { setStatus("error"); }
+  }
+
   return (
     <main className="relative flex-1 overflow-x-clip bg-[#282725] text-white">
       <SiteNavbar />
@@ -106,10 +120,10 @@ export function ContactPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={120}>
-            <form className="border border-[#d7bb7b]/14 bg-[#201f1d] p-5 sm:p-7">
+            <form onSubmit={handleSubmit} className="border border-[#d7bb7b]/14 bg-[#201f1d] p-5 sm:p-7">
               <div className="grid gap-4 md:grid-cols-2">
-                <Input label="Nombre" placeholder="Tu nombre" />
-                <Input label="Email" placeholder="tu@email.com" />
+                <Input name="name" label="Nombre" placeholder="Tu nombre" required />
+                <Input name="email" label="Email" placeholder="tu@email.com" type="email" required />
               </div>
 
               <div className="mt-7">
@@ -117,12 +131,13 @@ export function ContactPage() {
                   Tipo de proyecto
                 </p>
                 <div className="mt-3 grid gap-3 sm:grid-cols-4">
-                  {projectTypes.map((type) => (
+                  {projectTypes.map((type, index) => (
                     <label
                       key={type}
-                      className="group flex min-w-0 cursor-pointer items-center justify-center border border-[#d7bb7b]/14 bg-[#282725] px-2 py-4 text-center text-[10px] leading-5 uppercase tracking-[0.12em] text-[#ded4c2]/72 transition-all duration-300 hover:-translate-y-1 hover:border-[#d7bb7b]/42 hover:text-[#d7bb7b]"
+                      className="group relative flex min-w-0 cursor-pointer items-center justify-center border border-[#d7bb7b]/14 bg-[#282725] px-2 py-4 text-center text-[10px] leading-5 uppercase tracking-[0.12em] text-[#ded4c2]/72 transition-all duration-300 hover:-translate-y-1 hover:border-[#d7bb7b]/42 hover:text-[#d7bb7b] has-[input:checked]:border-[#d7bb7b] has-[input:checked]:bg-[#d7bb7b]/12 has-[input:checked]:text-[#d7bb7b] has-[input:checked]:shadow-[inset_0_-2px_0_#d7bb7b]"
                     >
-                      <input type="radio" name="type" className="sr-only" />
+                      <input type="radio" name="type" value={type} required={index === 0} className="sr-only" />
+                      <span className="absolute right-2 top-2 h-1.5 w-1.5 rounded-full bg-[#d7bb7b] opacity-0 transition-opacity group-has-[input:checked]:opacity-100" />
                       {type}
                     </label>
                   ))}
@@ -130,30 +145,64 @@ export function ContactPage() {
               </div>
 
               <div className="mt-7 grid gap-4 md:grid-cols-2">
-                <Input label="Fecha estimada" placeholder="Mes / año" />
-                <Input label="Ubicación" placeholder="Ciudad / país" />
+                <Input name="date" label="Fecha estimada" placeholder="Mes / año" type="month" />
+                <Input name="location" label="Ubicación" placeholder="Ciudad / país" />
               </div>
 
               <label className="mt-7 block">
                 <span className="text-[10px] uppercase tracking-[0.22em] text-[#d7bb7b]">
                   Mensaje
                 </span>
-                <textarea
+                <textarea name="message" required
                   className="mt-2 min-h-44 w-full border border-[#d7bb7b]/16 bg-[#282725] px-4 py-3 text-sm text-[#f5efe1] outline-none transition-colors placeholder:text-[#ded4c2]/40 focus:border-[#d7bb7b]/70"
                   placeholder="Cuéntanos qué quieres producir, para quién, dónde se verá y qué resultado esperas."
                 />
               </label>
+              <input name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+
+              {status !== "idle" && (
+                <div
+                  role={status === "error" ? "alert" : "status"}
+                  aria-live="polite"
+                  className={`mt-6 flex items-start gap-3 border px-4 py-4 text-sm leading-6 ${
+                    status === "success"
+                      ? "border-emerald-400/35 bg-emerald-950/30 text-emerald-100"
+                      : status === "error"
+                        ? "border-red-400/35 bg-red-950/30 text-red-100"
+                        : "border-[#d7bb7b]/30 bg-[#d7bb7b]/8 text-[#f5efe1]"
+                  }`}
+                >
+                  <span
+                    className={`mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
+                      status === "success"
+                        ? "bg-emerald-400 text-emerald-950"
+                        : status === "error"
+                          ? "bg-red-400 text-red-950"
+                          : "border border-[#d7bb7b] text-[#d7bb7b]"
+                    }`}
+                  >
+                    {status === "success" ? "✓" : status === "error" ? "!" : "…"}
+                  </span>
+                  <p>
+                    {status === "success"
+                      ? "¡Mensaje enviado correctamente! Hemos recibido tu brief y te contactaremos próximamente."
+                      : status === "error"
+                        ? "No hemos podido enviar tu mensaje. Comprueba los datos e inténtalo de nuevo."
+                        : "Enviando tu mensaje… espera un momento."}
+                  </p>
+                </div>
+              )}
 
               <div className="mt-7 flex flex-col gap-4 border-t border-[#d7bb7b]/12 pt-6 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-[420px] text-xs leading-6 text-[#ded4c2]/58">
-                  Este formulario es visual por ahora. Cuando definan proveedor
-                  de email o backend, lo conectamos a envío real.
+                  {status === "success" ? "Mensaje enviado. Te contactaremos próximamente." : status === "error" ? "No hemos podido enviarlo. Inténtalo de nuevo." : "Cuéntanos lo esencial y nos pondremos en contacto contigo."}
                 </p>
                 <button
-                  type="button"
+                  type="submit"
+                  disabled={status === "sending"}
                   className="inline-flex items-center justify-center gap-2 bg-[#d7bb7b] px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#090806] transition-transform duration-300 hover:-translate-y-0.5"
                 >
-                  Enviar brief
+                  {status === "sending" ? "Enviando…" : "Enviar brief"}
                   <ArrowRightIcon className="h-3.5 w-3.5" />
                 </button>
               </div>
@@ -210,14 +259,14 @@ function ContactLine({ icon, text, href }: { icon: ReactNode; text: string; href
   );
 }
 
-function Input({ label, placeholder }: { label: string; placeholder: string }) {
+function Input({ name, label, placeholder, type = "text", required = false }: { name: string; label: string; placeholder: string; type?: string; required?: boolean }) {
   return (
     <label>
       <span className="text-[10px] uppercase tracking-[0.22em] text-[#d7bb7b]">
         {label}
       </span>
-      <input
-        className="mt-2 w-full border border-[#d7bb7b]/16 bg-[#282725] px-4 py-3 text-sm text-[#f5efe1] outline-none transition-colors placeholder:text-[#ded4c2]/40 focus:border-[#d7bb7b]/70"
+      <input name={name} type={type} required={required}
+        className={`mt-2 w-full border border-[#d7bb7b]/16 bg-[#282725] px-4 py-3 text-sm text-[#f5efe1] outline-none transition-colors placeholder:text-[#ded4c2]/40 focus:border-[#d7bb7b]/70 ${type === "month" ? "[color-scheme:dark]" : ""}`}
         placeholder={placeholder}
       />
     </label>
